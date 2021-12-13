@@ -7,7 +7,6 @@ import 'package:project_sprout/custom_widgets/body_text.dart';
 import 'package:project_sprout/custom_widgets/header.dart';
 import 'package:project_sprout/custom_widgets/sub_header.dart';
 import 'package:project_sprout/model_classes/colours.dart';
-import 'package:project_sprout/pages/home_page.dart';
 import 'package:project_sprout/pages/user_input.dart';
 
 class GetStarted extends StatelessWidget {
