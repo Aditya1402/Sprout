@@ -80,7 +80,7 @@ class _HomePageState extends State<HomePage> {
         await placemarkFromCoordinates(position.latitude, position.longitude);
     print(placemarks);
     Placemark place = placemarks[0];
-    address = '${place.locality},${place.country}';
+    address = '${place.subAdministrativeArea},${place.administrativeArea}';
     await address;
     final String apiEndpoint =
         ("https://api.openweathermap.org/data/2.5/weather?q=$address&units=metric&appid=cbf9c071f96e2af72aefe1863047f79d");
