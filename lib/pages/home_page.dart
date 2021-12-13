@@ -217,7 +217,7 @@ class _HomePageState extends State<HomePage> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            address,
+                            address!=null? address :'-',
                             style: TextStyle(
                                 fontSize: 14.sp,
                                 fontWeight: FontWeight.bold,
@@ -227,14 +227,14 @@ class _HomePageState extends State<HomePage> {
                             height: 20.h,
                           ),
                           Text(
-                            "27°C",
+                              temperature != null ? (temperature.toInt()).toString() : '-',
                             style: TextStyle(
                                 fontSize: 55.sp,
                                 fontWeight: FontWeight.bold,
                                 color: Shade.dew),
                           ),
                           Text(
-                            "Sunshower",
+                            weather != null ? weather.toString() : '-',
                             style: TextStyle(
                                 fontSize: 18.sp,
                                 fontWeight: FontWeight.bold,
