@@ -1,51 +1,43 @@
-###### sprout.
- 
-**NOTE:** Project still in progress
-# SPROUT
+# project_sprout
 
-### Table Of Contents:
-- [General Info](#general-info)
-- [Main Vision](#main-vision)
-- [Technologies Used](#technologies-being-used)
-- [Hardware & Software Requirements](#hardware-and-software-requirements)
-- [Project Status](#project-status)
-- [**How to use our App?**](#how-to-test-our-app)
+A new Flutter project.
 
----
-### General Info:
-A cross-platform mobile app designed primarily with Flutter and Dart.
+## Getting Started
+
 This project is a starting point for a Flutter application.
 
----
+A few resources to get you started if this is your first Flutter project:
 
-### Technologies Being Used: 
-The project is mainly being created using:
-- **Flutter & Dart 2.1**
-- **Python 3.9 and Pandas 1.3.4**
-- **Hive**
-- **Calender API**
-- **Weather API**
----
-### Project Status: 
-♻️Currently being worked on
+- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
----
+For help getting started with Flutter, view our
+[online documentation](https://flutter.dev/docs), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
 
-### Hardware and Software Requirements:
+//////////////////////////  REFERENCE  //////////////////////////
 
-**Unsupported platforms**
+## Font Used: 
+MuseoSansRounded
 
-- **Android:**	Android SDK _**15**_ & below
-- **iOS:**	iOS _**8**_ & below
-- 
 
-**Supported platforms**
+## Packages Used 
 
-- **Android**:	API **_19_** & above	All
-- **iOS:**	iOS **_9_** & above	All
----
+- flutter_native_splash
+- flutter_launcher_icons
+- animated_button
+- flutter_screenutil
+- lottie
+- flutter_svg
 
-### How to test our App?
-Our application will soon be available on the **Google Play Store** and the **Apple App Store** in the near future.
 
----
+## Extra Information
+
+- Border Padding: 30px
+- Heading Font Size: 
+- SubHeading Font Size:
+- BodyText Font Size:
+
+## Icons
+
+- iconly package

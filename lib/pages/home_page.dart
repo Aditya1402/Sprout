@@ -12,7 +12,6 @@ import 'package:project_sprout/pages/user_input.dart';
 import 'package:http/http.dart' as http;
 import 'dart:async';
 import 'dart:convert';
-
 import '../model_classes/colours.dart';
 import 'user_input.dart';
 
@@ -24,21 +23,12 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
 
-// Page Index OnTapped
-  void onTapped(index) {
-    setState(() {
-      _pageIndex = index;
-      pageController.jumpTo(index);
-    });
-  }
-
   // Declaring Weather Card Variables
   var temperature;
   var address;
   var location;
   var weather;
   int _pageIndex = 0;
-  PageController pageController = PageController();
 
   Future<Position> _getGeoLocationPosition() async {
     bool serviceEnabled;
@@ -80,7 +70,7 @@ class _HomePageState extends State<HomePage> {
         await placemarkFromCoordinates(position.latitude, position.longitude);
     print(placemarks);
     Placemark place = placemarks[0];
-    address = '${place.locality},${place.country}';
+    address = '${place.subAdministrativeArea},${place.administrativeArea}';
     await address;
     final String apiEndpoint =
         ("https://api.openweathermap.org/data/2.5/weather?q=$address&units=metric&appid=cbf9c071f96e2af72aefe1863047f79d");
@@ -217,7 +207,7 @@ class _HomePageState extends State<HomePage> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            address!=null? address :'-',
+                            address ?? "-",
                             style: TextStyle(
                                 fontSize: 14.sp,
                                 fontWeight: FontWeight.bold,
@@ -227,7 +217,7 @@ class _HomePageState extends State<HomePage> {
                             height: 20.h,
                           ),
                           Text(
-                              temperature != null ? (temperature.toInt()).toString() : '-',
+                            temperature != null ? (temperature.toInt()).toString() + "°C" : '-',
                             style: TextStyle(
                                 fontSize: 55.sp,
                                 fontWeight: FontWeight.bold,
@@ -298,23 +288,7 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        elevation: 0,
-        selectedItemColor: Shade.t1,
-        unselectedItemColor: Shade.t3,
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(icon: Icon(IconlyBold.home), label: "Home"),
-          BottomNavigationBarItem(
-              icon: Icon(IconlyBold.search), label: "Search"),
-          BottomNavigationBarItem(
-              icon: Icon(IconlyBold.notification), label: "Reminder"),
-          BottomNavigationBarItem(
-              icon: Icon(IconlyBold.heart), label: "Favorites"),
-          BottomNavigationBarItem(
-              icon: Icon(IconlyBold.profile), label: "Profile"),
-        ],
-        currentIndex: _pageIndex,
-      ),
+      
     );
   }
 }
