@@ -1,43 +1,62 @@
-# project_sprout
+###### sprout.
+ 
+**NOTE:** Project still in progress
+# SPROUT
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-
-//////////////////////////  REFERENCE  //////////////////////////
-
-## Font Used: 
-MuseoSansRounded
+### Table Of Contents:
+- [General Info](#general-info)
+- [Main Vision](#main-vision)
+- [Technologies Used](#technologies-being-used)
+- [Hardware & Software Requirements](#hardware-and-software-requirements)
+- [Project Status](#project-status)
+- [**How to use our App?**](#how-to-test-our-app)
+- [**Our Team**](#our-team)
 
 
-## Packages Used 
+---
+### General Info:
+A cross-platform mobile app designed primarily with Flutter and Dart.
 
-- flutter_native_splash
-- flutter_launcher_icons
-- animated_button
-- flutter_screenutil
-- lottie
-- flutter_svg
+---
 
+### Main Vision:
+In 2020, 67 percent of newbie gardeners said the epidemic encouraged their decision to start growing their own organic food.
+Many of these people have no idea what plants to raise, how often they should indeed be watered, or what maladies they could develop and how to address them.
+Our solution is a cross-platform application that helps rookie gardeners care for their plants appropriately.
 
-## Extra Information
+---
 
-- Border Padding: 30px
-- Heading Font Size: 
-- SubHeading Font Size:
-- BodyText Font Size:
+### Technologies Being Used: 
+The project is mainly being created using:
+- **Flutter & Dart 2.1**
+- **Python 3.9 and Pandas 1.3.4**
+- **Hive**
+- **Calender API**
+- **Weather API**
 
-## Icons
+---
 
-- iconly package
+### Project Status: 
+♻️Currently being worked on
+
+---
+
+### Hardware and Software Requirements:
+
+**Unsupported platforms**
+
+- **Android:**	Android SDK _**15**_ & below
+- **iOS:**	iOS _**8**_ & below
+
+**Supported platforms**
+
+- **Android**:	API **_19_** & above	All
+- **iOS:**	iOS **_9_** & above	All
+
+---
+
+### How to test our App?
+Our application will soon be available on the **Google Play Store** and the **Apple App Store** in the near future.
+
+---
+
