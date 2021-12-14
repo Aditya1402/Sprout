@@ -135,7 +135,42 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       // App Bar Configurations
+<<<<<<< Updated upstream
       appBar: PreferredSize(preferredSize: Size.fromHeight(56),child: CustomAppBar("sprout.")),
+=======
+      appBar: AppBar(
+        // Removing AppBar Back Button
+        automaticallyImplyLeading: false,
+        centerTitle: true,
+
+        // Bottom Border
+        bottom: PreferredSize(
+          child: Container(
+            color: Shade.t3,
+            height: 3.h,
+          ),
+          preferredSize: Size.fromHeight(1.5.h),
+        ),
+
+        // Color
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        title: Text(
+          'Sprout',
+          style: const TextStyle(fontWeight: FontWeight.bold, color: Shade.t4),
+        ),
+
+        actions: [
+          IconButton(
+              onPressed: () {},
+              icon: Icon(
+                IconlyLight.more_circle,
+                color: Shade.t1,
+                size: 28.w,
+              ))
+        ],
+      ),
+>>>>>>> Stashed changes
 
       ///////////////////////// BODY /////////////////////////////
       body: Padding(
@@ -143,7 +178,7 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SubHead('Hi ${finalName},'),
+            SubHead('Hi '+'User'),//TODO change string user to var finalName
             Text(
               greetingMessage(),
               style: TextStyle(

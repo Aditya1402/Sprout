@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:project_sprout/pages/Splash.dart';
 import 'package:project_sprout/pages/get_started.dart';
 
 void main() => runApp(MyApp());
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
 
           //////////////////// METADATA ENDS HERE ////////////////////
 
-          home: GetStarted()),
+          home: Splash()),
       designSize: const Size(414, 896),
       
     );
