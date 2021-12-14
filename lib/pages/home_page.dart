@@ -135,9 +135,9 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       // App Bar Configurations
-<<<<<<< Updated upstream
-      appBar: PreferredSize(preferredSize: Size.fromHeight(56),child: CustomAppBar("sprout.")),
-=======
+// <<<<<<< Updated upstream
+//       appBar: PreferredSize(preferredSize: Size.fromHeight(56),child: CustomAppBar("sprout.")),
+// =======
       appBar: AppBar(
         // Removing AppBar Back Button
         automaticallyImplyLeading: false,
@@ -170,7 +170,7 @@ class _HomePageState extends State<HomePage> {
               ))
         ],
       ),
->>>>>>> Stashed changes
+// >>>>>>> Stashed changes
 
       ///////////////////////// BODY /////////////////////////////
       body: Padding(
