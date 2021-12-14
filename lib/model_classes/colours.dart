@@ -6,8 +6,10 @@ class Shade {
   // Primary Color Palette
   static const straw = Color(0xff58cc02);
   static const moss = Color(0xff89e219);
-  static const t1 = Color(0xff4b4b4b);
+  static const t1 = Color(0xff323232);
   static const dew = Color(0xffFFFFFF);
+  static const nimbus = Color(0xff4b4b4b);
+
 
   // Secondary Color Palette
   static const blueTang = Color(0xff1cb0f6);

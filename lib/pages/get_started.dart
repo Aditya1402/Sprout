@@ -15,7 +15,7 @@ class GetStarted extends StatelessWidget {
 
     //////////////////// STARTS HERE ////////////////////
     return Scaffold(
-      backgroundColor: Color(0xffEDEDED),
+      backgroundColor: const Color(0xffEDEDED),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 30.w),
         child: Column(
@@ -92,7 +92,7 @@ class GetStarted extends StatelessWidget {
                 ],
               )),
 
-            Spacer()
+            const Spacer()
           ],
         ),
       ),

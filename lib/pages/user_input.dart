@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:project_sprout/custom_widgets/nav_bar.dart';
 import 'package:project_sprout/custom_widgets/sub_header.dart';
 import 'package:project_sprout/model_classes/colours.dart';
 import 'package:project_sprout/pages/home_page.dart';
@@ -127,7 +128,7 @@ class _InputState extends State<Input> {
                 style: TextButton.styleFrom(splashFactory: NoSplash.splashFactory),
                   onPressed: index==0
                   ?updateIndex
-                  :() => Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage())),
+                  :() => Navigator.push(context, MaterialPageRoute(builder: (context)=>NavBar())),
                   child: Text(
                     "NEXT",
                   

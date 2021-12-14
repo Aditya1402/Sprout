@@ -6,12 +6,16 @@ import 'package:geocoding/geocoding.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:iconly/iconly.dart';
 import 'package:lottie/lottie.dart';
+import 'package:project_sprout/custom_widgets/app_bar.dart';
 import 'package:project_sprout/custom_widgets/sub_header.dart';
 import 'package:project_sprout/model_classes/colours.dart';
+import 'package:project_sprout/pages/reminder.dart';
 import 'package:project_sprout/pages/user_input.dart';
 import 'package:http/http.dart' as http;
 import 'dart:async';
 import 'dart:convert';
+import '../custom_widgets/button.dart';
+import '../custom_widgets/header.dart';
 import '../model_classes/colours.dart';
 import 'user_input.dart';
 
@@ -131,38 +135,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       // App Bar Configurations
-      appBar: AppBar(
-        // Removing AppBar Back Button
-        automaticallyImplyLeading: false,
-        centerTitle: true,
-
-        // Bottom Border
-        bottom: PreferredSize(
-          child: Container(
-            color: Shade.t3,
-            height: 3.h,
-          ),
-          preferredSize: Size.fromHeight(1.5.h),
-        ),
-
-        // Color
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        title: Text(
-          finalName,
-          style: const TextStyle(fontWeight: FontWeight.bold, color: Shade.t4),
-        ),
-
-        actions: [
-          IconButton(
-              onPressed: () {},
-              icon: Icon(
-                IconlyLight.more_circle,
-                color: Shade.t1,
-                size: 28.w,
-              ))
-        ],
-      ),
+      appBar: PreferredSize(preferredSize: Size.fromHeight(56),child: CustomAppBar("sprout.")),
 
       ///////////////////////// BODY /////////////////////////////
       body: Padding(
@@ -260,8 +233,45 @@ class _HomePageState extends State<HomePage> {
                     color: Shade.t3, borderRadius: BorderRadius.circular(15)),
                 child: Column(
                   children: [
-                    RaisedButton(onPressed: () {}, child: Text('Search')),
-                    RaisedButton(onPressed: () {}, child: Text('Recommend Me'))
+                    SizedBox(height: 20.h,),
+                    Container(
+                      width: 350.w,
+                      height: 55.h,
+                      child: TextButton(
+                        
+                        style: ButtonStyle(
+                          splashFactory: NoSplash.splashFactory,
+                              backgroundColor: MaterialStateProperty.all(Shade.dew),
+                              shape: MaterialStateProperty.all<
+                                      RoundedRectangleBorder>(
+                                  RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(12.0),
+                                  ))
+),
+                        onPressed: () {}, 
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Padding(
+                              padding:  EdgeInsets.fromLTRB(0, 0, 0, 5.h),
+                              child: Icon(IconlyLight.search,color: Shade.t2,),
+                            ),
+                            SizedBox(width: 5.w),
+                            Text('Search',
+                        style: TextStyle(
+                          color: Shade.t2,
+                          fontSize: 18.sp
+                        ),)
+                          ],
+                        )),
+                    ),
+
+                    SizedBox(
+                      height: 15.h,
+                    ),
+
+
+                    Button("Recommend Me",Shade.blueTang),
                   ],
                 ),
               ),
@@ -276,13 +286,44 @@ class _HomePageState extends State<HomePage> {
               elevation: 0,
               child: Container(
                 width: double.infinity,
-                height: 130.h,
+                height: 145.h,
                 decoration: BoxDecoration(
                     gradient: LinearGradient(
                         colors: [Color(0xffFFC4FD), Color(0xffBFE5FF)],
                         begin: Alignment.topLeft,
                         end: Alignment.bottomRight),
                     borderRadius: BorderRadius.circular(15)),
+
+
+                    child: Padding(
+                      padding: const EdgeInsets.all(20.0),
+                      child: Row(
+                        
+                        children: [
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text("Want us to remind you?",
+                              style: TextStyle(
+                                color: Shade.t1,
+                                fontSize: 23.sp,
+                                fontWeight: FontWeight.w700
+                              ),),
+                              SizedBox(height: 5.h,),
+                              Text("Never forget to water your plants now!"),
+                              SizedBox(height: 2.h,),
+                              IconButton(
+                                onPressed: null,
+                                icon: Icon(IconlyLight.plus),
+                              )
+                            ],
+                          ),
+
+
+                          // Add image here
+                        ],
+                      ),
+                    ),
               ),
             ),
           ],
