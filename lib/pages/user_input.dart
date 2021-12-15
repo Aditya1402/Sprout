@@ -7,7 +7,7 @@ import 'package:project_sprout/custom_widgets/sub_header.dart';
 import 'package:project_sprout/model_classes/colours.dart';
 import 'package:project_sprout/pages/home_page.dart';
 
-   late String finalName;
+   late String finalName  ;
    late double finalArea;
 
 class Input extends StatefulWidget {

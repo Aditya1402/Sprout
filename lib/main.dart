@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:project_sprout/pages/Splash.dart';
 import 'package:project_sprout/pages/get_started.dart';
 import 'package:project_sprout/pages/loading.dart';
 import 'package:project_sprout/pages/reminder.dart';
@@ -31,8 +32,7 @@ class MyApp extends StatelessWidget {
 
           //////////////////// METADATA ENDS HERE ////////////////////
 
-          home: Loading()),
-          
+          home: Splash()),
       designSize: const Size(414, 896),
       
     );
