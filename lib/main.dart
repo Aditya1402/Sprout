@@ -3,6 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:project_sprout/pages/get_started.dart';
+import 'package:project_sprout/pages/loading.dart';
+import 'package:project_sprout/pages/reminder.dart';
 
 void main() => runApp(MyApp());
 
@@ -16,7 +18,9 @@ class MyApp extends StatelessWidget {
 
     return ScreenUtilInit(
       builder: () => MaterialApp(
-
+        routes: {
+          '/reminder' : (context) => Reminder(),
+        },
           //////////////////// METADATA HERE ////////////////////
 
           title: 'Sprout',
@@ -27,7 +31,8 @@ class MyApp extends StatelessWidget {
 
           //////////////////// METADATA ENDS HERE ////////////////////
 
-          home: GetStarted()),
+          home: Loading()),
+          
       designSize: const Size(414, 896),
       
     );

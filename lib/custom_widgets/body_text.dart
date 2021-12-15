@@ -24,7 +24,7 @@ class BodyText extends StatelessWidget {
 
           // Customize Here
           color: Shade.t4,
-          fontSize: 18.sp,
+          fontSize: 17.sp,
           
           ),
           textScaleFactor: 1.1,

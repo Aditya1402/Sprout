@@ -74,7 +74,7 @@ class _HomePageState extends State<HomePage> {
         await placemarkFromCoordinates(position.latitude, position.longitude);
     print(placemarks);
     Placemark place = placemarks[0];
-    address = '${place.subAdministrativeArea},${place.administrativeArea}';
+    address = '${place.subAdministrativeArea},${ place.administrativeArea}';
     await address;
     final String apiEndpoint =
         ("https://api.openweathermap.org/data/2.5/weather?q=$address&units=metric&appid=cbf9c071f96e2af72aefe1863047f79d");
@@ -162,7 +162,7 @@ class _HomePageState extends State<HomePage> {
               elevation: 0,
               child: Container(
                 width: double.infinity,
-                height: 170.h,
+                height: 180.h,
                 decoration: BoxDecoration(
                     gradient: LinearGradient(
                       colors: changeColor(),
@@ -286,7 +286,7 @@ class _HomePageState extends State<HomePage> {
               elevation: 0,
               child: Container(
                 width: double.infinity,
-                height: 145.h,
+                height: 160.h,
                 decoration: BoxDecoration(
                     gradient: LinearGradient(
                         colors: [Color(0xffFFC4FD), Color(0xffBFE5FF)],
@@ -313,7 +313,8 @@ class _HomePageState extends State<HomePage> {
                               Text("Never forget to water your plants now!"),
                               SizedBox(height: 2.h,),
                               IconButton(
-                                onPressed: null,
+                                onPressed: ()=>
+                                Navigator.pushNamedAndRemoveUntil(context,'/reminder', (Route<dynamic>route)=>false),
                                 icon: Icon(IconlyLight.plus),
                               )
                             ],

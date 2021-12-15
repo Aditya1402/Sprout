@@ -19,7 +19,7 @@ class _HomeState extends State<NavBar> {
 
 
   // Change Index
-  void updateIndex(index) {
+  void updateind(index) {
     setState(() => this.nav_index = index);
   }
 
@@ -46,7 +46,7 @@ class _HomeState extends State<NavBar> {
             child: NavigationBar(
                 backgroundColor: Colors.transparent,
                 selectedIndex: nav_index,
-                onDestinationSelected: updateIndex,
+                onDestinationSelected: updateind,
                 destinations: [
                   const NavigationDestination(
                       icon: Icon(IconlyLight.home),

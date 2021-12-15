@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 class Shade {
   // Primary Color Palette
-  static const straw = Color(0xff58cc02);
+  static const straw = Color(0xff4caf50);
   static const moss = Color(0xff89e219);
   static const t1 = Color(0xff323232);
   static const dew = Color(0xffFFFFFF);
@@ -16,7 +16,7 @@ class Shade {
   static const dolphinBlue = Color(0xff2b70c9);
   static const bee = Color(0xffffc800);
   static const fox = Color(0xffff9600);
-  static const orca = Color(0xffa560e8);
+  static const orca = Color(0xff816AE2);
   static const vermillion = Color(0xffff4b4b);
 
   // Neutrals

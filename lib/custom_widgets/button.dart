@@ -18,9 +18,10 @@ class Button extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AnimatedButton(
+    return FlatButton(
+         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
         color: buttonColor,
-        width: 354.w, 
+        minWidth: 366.w, 
         height: 60,
         onPressed: () {}, 
         child: Text(text,

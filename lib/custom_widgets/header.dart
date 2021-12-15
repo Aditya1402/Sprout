@@ -24,7 +24,7 @@ class Head extends StatelessWidget {
       style: TextStyle(
 
         // Customize Here
-        color: Shade.t1,
+        color: Color(0xff323232),
         fontSize: 30.sp,
         fontWeight: FontWeight.w900
       ),
