@@ -1,5 +1,5 @@
 import 'package:awesome_notifications/awesome_notifications.dart';
-import 'package:sprout/reminder/utilities.dart';
+import 'package:sprout/widgets/reminder/utilities.dart';
 
 Future<void> createWaterReminderNotification(
     NotificationWeekAndTime notificationSchedule) async {

@@ -1,10 +1,11 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'dart:io';
 import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:flutter/material.dart';
-import 'package:sprout/main.dart';
-//import 'package:sprout/pages/home_page.dart';
-import 'package:sprout/reminder/utilities.dart';
-import 'package:sprout/reminder/notification_service.dart';
+import 'package:sprout/widgets/reminder/notification_service.dart';
+import 'package:sprout/widgets/reminder/utilities.dart';
+
 
 class Reminder extends StatefulWidget {
   @override

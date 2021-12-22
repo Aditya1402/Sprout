@@ -3,15 +3,14 @@
 ## Packages Used:
 
 ### Reminder:
-   - Awesome Notifications Package 
-   - Allow Notifications Platform Permissions for Android and iOS
+   - awesome_notifications: ^0.6.19
+
 ### User Authentication:
 
 ### Weather Feature:
-   - OpenWeather API 
-   - http package
-   - geocoder package
-   - geolocator package
+   - http: ^0.13.4
+   - geocoding: ^2.0.1
+   - geolocator: ^8.0.1
 
 ### Images:
 
