@@ -10,7 +10,7 @@ class GetStarted extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.all(25),
+        padding: EdgeInsets.all(25.w),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: 

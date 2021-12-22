@@ -43,6 +43,7 @@ dependencies:
   animations: ^2.0.2
   animate_do: ^2.0.0
   intro_slider: ^3.0.2
+  flutter_svg: ^1.0.0
 
 flutter_native_splash:
   android: true
@@ -82,6 +83,7 @@ flutter:
   assets:
     - assets/images/lottie/
     - assets/images/png/
+    - assets/images/svg/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

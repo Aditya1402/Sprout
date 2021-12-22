@@ -14,6 +14,7 @@
 
 ### Images:
    - lottie: ^1.2.1
+   - flutter_svg: ^1.0.0
 
 ### Responsiveness:
    - flutter_screenutil: ^5.0.1+2
@@ -29,5 +30,6 @@
 
 ## Miscellaneous:
    - intro_slider: ^3.0.2
+
 
 
