@@ -13,7 +13,7 @@ void main() {
         locked: true,
         importance: NotificationImportance.High,
         soundSource: 'resource://raw/res_custom_notification',
-        channelDescription: '',
+        channelDescription: 'Scheduled Notifications for Reminder',
       ),
     ],
   );

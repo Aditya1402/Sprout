@@ -43,7 +43,7 @@ class _ReminderState extends State<Reminder> {
                   child: const Text(
                     'Allow',
                     style: TextStyle(
-                      color: Colors.teal,
+                      color: Color(0xffcae183),
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
                     ),

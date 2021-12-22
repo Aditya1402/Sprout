@@ -15,8 +15,8 @@ class NotificationWeekAndTime {
 }
 
 Future<NotificationWeekAndTime?> pickSchedule(
-    BuildContext context,
-    ) async {
+  BuildContext context,
+) async {
   List<String> weekdays = [
     'Mon',
     'Tue',
@@ -49,12 +49,12 @@ Future<NotificationWeekAndTime?> pickSchedule(
                     Navigator.pop(context);
                   },
                   style: ButtonStyle(
-                    shape: MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(20))),
+                    shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20))),
                     backgroundColor: MaterialStateProperty.all(
                       Colors.green.shade400,
                     ),
-                    foregroundColor: MaterialStateProperty.all(
-        Colors.white),
+                    foregroundColor: MaterialStateProperty.all(Colors.white),
                   ),
                   child: Text(weekdays[index]),
                 ),
@@ -75,7 +75,7 @@ Future<NotificationWeekAndTime?> pickSchedule(
           return Theme(
             data: ThemeData(
               colorScheme: ColorScheme.light(
-                primary: Colors.teal,
+                primary: Color(0xffcae183),
               ),
             ),
             child: child!,
@@ -89,4 +89,3 @@ Future<NotificationWeekAndTime?> pickSchedule(
   }
   return null;
 }
-
