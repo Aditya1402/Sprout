@@ -6,4 +6,8 @@ class Shade {
   static const moss = Color(0xffC0D77A);
   static const cloud = Color(0xffEBEBEB);
 
+
+
+  static const g1 = Color(0xffDBDBDB);
+
 }
