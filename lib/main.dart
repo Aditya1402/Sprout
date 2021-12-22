@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:awesome_notifications/awesome_notifications.dart';
-import 'package:sprout/pages/reminder.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:sprout/pages/get_started.dart';
 
 void main() {
   AwesomeNotifications().initialize(
@@ -24,7 +25,27 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Reminder(),
+
+      //////////////////// THEMING ////////////////////
+      
+      theme: ThemeData(
+        appBarTheme: const AppBarTheme(
+          color: Colors.transparent,
+          toolbarTextStyle: TextStyle()),
+        fontFamily: 'Inter',
+
+      ),
+
+      
+
+      /////////////////////////////////////////////////
+      home: 
+      
+      ScreenUtilInit(designSize: const Size(414,896), builder: () => 
+      
+      GetStarted()
+      
+      )
     );
   }
 }

@@ -3,6 +3,7 @@
 import 'dart:io';
 import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:flutter/material.dart';
+import 'package:sprout/widgets/common/appBar.dart';
 import 'package:sprout/widgets/reminder/notification_service.dart';
 import 'package:sprout/widgets/reminder/utilities.dart';
 
@@ -89,70 +90,56 @@ class _ReminderState extends State<Reminder> {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        body: SingleChildScrollView(
-          child: Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                const Padding(
-                  padding: EdgeInsets.symmetric(vertical: 20, horizontal: 15),
-                  child: Text(
-                    'Set a reminder to water your plants.',
-                    style: TextStyle(
-                      fontSize: 30,
-                      fontWeight: FontWeight.w700,
-                    ),
-                  ),
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                Padding(
-                  padding:
-                      const EdgeInsets.symmetric(vertical: 20, horizontal: 15),
-                  child: Text(
-                    'You can choose any time, but we suggest early morning.',
-                    style: TextStyle(
-                      fontSize: 20,
-                      color: Colors.grey.shade600,
-                    ),
-                  ),
-                ),
-                const SizedBox(
-                  height: 300,
-                ),
-                Container(
-                  height: 60,
-                  width: 200,
-                  child: TextButton(
-                    style: ButtonStyle(
-                      shape: MaterialStateProperty.all(RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20))),
-                      backgroundColor:
-                          MaterialStateProperty.all(const Color(0xffB2B9F7)),
-                      foregroundColor: MaterialStateProperty.all(Colors.white),
-                    ),
-                    onPressed: () async {
-                      NotificationWeekAndTime? pickedSchedule =
-                          await pickSchedule(context);
+    return Scaffold(
 
-                      if (pickedSchedule != null) {
-                        createWaterReminderNotification(pickedSchedule);
-                      }
-                    },
-                    child: const Text(
-                      'Add a reminder',
-                      style: TextStyle(
-                        fontSize: 22,
-                      ),
-                    ),
+      appBar: NewAppBar("Hi"),
+
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            //////////////////////////////////////////////////////////////////////
+            
+            Container(
+              height: 60,
+              width: 200,
+              child: TextButton(
+                style: ButtonStyle(
+                  shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20))),
+                  backgroundColor:
+                      MaterialStateProperty.all(const Color(0xffB2B9F7)),
+                  foregroundColor: MaterialStateProperty.all(Colors.white),
+                ),
+                onPressed: () async {
+                  NotificationWeekAndTime? pickedSchedule =
+                      await pickSchedule(context);
+
+                  if (pickedSchedule != null) {
+                    createWaterReminderNotification(pickedSchedule);
+                  }
+                },
+                child: const Text(
+                  'Add a reminder',
+                  style: TextStyle(
+                    fontSize: 22,
                   ),
                 ),
-              ],
+              ),
             ),
-          ),
+          ],
         ),
       ),
     );

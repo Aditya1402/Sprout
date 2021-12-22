@@ -1,0 +1,159 @@
+Sr.No.,Name,Type,WaterRequirements,MinTemp,MaxTemp,CommonPlantDiseases,SoilType,Fertilisers
+1,Apple,Fruit,38 per week,21,24,Cedar Apple Rust,Loamy soil,Common granular 20-10-10
+2,Starfruit,Fruit,38 to 56 per week,20,35,Pests,Loamy soil,"manganese, iron, zinc, and magnesium"
+3,Apricot,Fruit, 8 per week,0,8,Brown Rot,Loamy soil,Nitrogen
+4,Avocado,Fruit,18 to 75 per week,16,26,Cankers,"Sandy soil, Loamy soil",Ammoniun nitrate
+5,Banana,Fruit,60 per week,15,20,Anthracnose,Loamy soil ,"150-200g N, 40-60g P2O5 and 200-300g K2O"
+6,Blueberry,Fruit,30 to 45 per week,2,7,Bacterial Canker,Silty soil,Ammonium sulfate
+7,Cherry,Fruit,200 per week,7,10,Black Knot,Sandy soil,Low nitrogen
+8,Custard Apple,Fruit,50 to 100 per week,18,30,"Insects, Mit Pests","Sandy soil, Loamy soil","250 g N, 125 g P2O5, and 125 g K2O"
+9,Cantaloupe,Fruit,102 per week,15,18,Powdery Mildew,Loamy soil,Sulphur
+10,Guava,Fruit,140 per week,4,9,Guava Wilt,Sandy soil,6-6-6-2 fertilizer
+11,Dates,Fruit,50 to 60 per week,7,32,Bayoud Disease,"Sandy soil, Loamy soil",Manure
+12,Jamun,Fruit,40 per week,28,32,Anthracnose,Loamy soil,Rotten farm yard manure
+13,Dragon Fruit,Fruit,80 per week,30,36,Anthracnose,Loamy soil,Bio basis 8-3-9
+14,Grape Fruit,Fruit,30 to 40 per week,20,30,Downy Mildew,Loamy soil,Kalibrate liquid
+15,Grapes,Fruit,20 to 30 per week,16,20,Pests,Loamy soil,Nitrogen
+16,Honeydew Melon,Fruit,40 to 50 per week,15,18,Sudden Wilt,"Sandy soil, Loamy soil",Phosporous and potassium heavy fertilizer
+17,Honey Berry,Fruit,80 per week,30,32,Pests,Loamy soil,Nitrogen
+18,Kiwi,Fruit,200 per week,1,7,"Phytophthora Crown, Root Rot",Silty soil,High nitrogen fertilizer
+19,Kiwano,Fruit,50 per week,20,35,Pests,Silty soil,"Nitrogen, Phosporous, Potassium"
+20,Kumquat,Fruit,80 per week,7,15,Acorn Disease,Loamy soil,Diluted liquid fertilizer
+21,Lime,Fruit,60 to 65 per week,30,35,Citrus Canker,Silty soil,Commercial chemical fertilizer
+22,Lychee,Fruit,40 per week,20,30,Erinose Mite,"Sandy soil, Loamy soil","Nitrogen, Phosporous, Potash, Magnesium"
+23,Loquat,Fruit,100 per week,10,15,"Cankers, Crown Rot, Collar Rot",Loamy soil,Nitrogen
+24,Mango,Fruit,60 per week,24,27,Powder Mildew,"Sandy soil, Loamy soil","FYM 25 kg/tree, N 500 g and 1 kg"
+25,Palm Fruit,Fruit,35 to 45 per week,28,30,Leaf Spots,Loamy soil,Milogranite
+26,Raspberry,Fruit,48 per week,25,35,Cane Blight,Clay soil,High quality organic fertilizer
+27,Strawberry,Fruit,32 per week,15,30,Anthracnose,"Sandy soil, Loamy soil",Boron
+28,Tangerine,Fruit,68 per week,10,35,Brown Spot,Loamy soil,Ammonium sulfate
+29,Watermelon,Fruit,30 to 70 per week,20,35,Pests,"Sandy soil, Loamy soil",Nitrogen
+30,Sugarcane,Fruit,60 per week,16,24,Red Rot,Sandy soil,Nitrogen
+31,Olive,Fruit,50 per week,15,20,Xylella,Loamy soil,Nitrogen
+32,Melon,Fruit,118 per week,20,30,Pests,"Sandy soil, Loamy soil",Nitrogen
+33,Pear,Fruit,90 per week,5,10,Pear Scab,Clay soil,Balanced 13-13-13 fertilizers
+34,Orange,Fruit,63 per week,7,37,Citrus Black Spot,Loamy soil,Phosphate fertilizers
+35,Papaya,Fruit,20 to 25 per week,20,35,Anthracnose,"Sandy soil, Loamy soil",14-14-14 fertilizers
+36,Plum,Fruit,160 per week,0,5,Bacterial Canker,"Sandy soil, Loamy soil",Ammonium nitrate
+37,Peach,Fruit,105 to 120 per week,5,15,Brown Rot,"Sandy soil, Loamy soil","Nitrogen, Phosporous, Potassium"
+38,Pomegranate,Fruit,75 per week,5,35,Alternaria Fruit Rot,"Sandy soil, Loamy soil",Nitrogen
+39,Pine Apple,Fruit,15 to 20 per week,15,30,Pests,Sandy soil,Foliar spray
+40,Tomato,Vegetable,10 per week,21,24,Damping Off,"Sandy soil, Clay soil",Ammonium nitrate 34-0-0
+41,Onion,Vegetable,60 per week,20,25,Purple Blotch,"Sandy soil, Loamy soil, Clay soil",ammonium sulfate or ammonium nitrate
+42,Potato,Vegetable,1 to 1.2 per week,26,30,Potato Late Blight,Loamy soil,Compost
+43,Turmeric,Vegetable,15 to 20 per week,30,32,"Leaf Spot, Leaf Blotch","Sandy soil, Clay soil","Phosphorus, Potash, Nitrogen"
+44,Sweet Potato,Vegetable,10 to 12 per week,12,20,"Leaf Spot, Leaf and Stem Blight","Sandy soil, Loamy soil",Nitrogen (N-P-K 34-0-0)
+45,Spring Onion,Vegetable,5 to 8 per week,26,36,Neck Rot,"Sandy soil, Loamy soil, Clay soil",Ammonium sulfate or ammonium nitrate
+46,Spinach,Vegetable,15 to 20 per week,25,35,Damping Off,Sandy soil,Fish emulsion or compost tea
+47,Snake Gourd,Vegetable,30 per week,15,20,Angular Leaf Spot,Loamy soil,Nitrogen
+48,Pumpkin ,Vegetable,40 per week,18,24,"White Speck, Gummy Stem Blight",Silty soil,Organic manure
+49,Garlic,Vegetable,10 to 20 per week,20,25,Downy Mildew,"Sandy soil, Loamy soil, Clay soil",High quality organic fertilizer
+50,Fenugreek Leaf,Vegetable,40 to 50 per week,32,38,Cercospora Leaf Spot,Silty soil,Ammoniun nitrate
+51,Ginger,Vegetable,10 to 14 per week,16,32,Soft Rot,Loamy soil,Nitrogen
+52,Green Beans,Vegetable,50 per week,12,18,Cutworms,"Sandy soil, Clay soil",2 to 3 pounds of(10-20-10) fertilizers
+53,Radish,Vegetable,30 to 35 per week,17,20,Alternaria Blight,Sandy soil,5:5:5 N:P:K fertiliser
+54,Lady Finger,Vegetable,70 per week,22,28,Green Stinkbugs,Silty soil,Organic manure
+55,Mushroom,Vegetable,10 to 15 per week,12,22,Green Mold,Loamy soil,Nitrogen
+56,Maize,Vegetable,30 per week,10,16,"Common Rust, Polysora Rust",Clay soil,Milogranite
+57,Natal Plum,Vegetable,12 per week,26,30,Cankers,"Sandy soil, Loamy soil, Clay soil",Nitrogen
+58,Mustard Greens,Vegetable,25 to 30 per week,21,24,Alternaria Leaf Spot,Loamy soil,Organic manure
+59,Pointed Gourd,Vegetable,10 to 20 per week,20,25,Red Beetles,Silty soil,Ammonium sulfate or ammonium nitrate
+60,Peppermint,Vegetable,20 per week,26,32,Verticilium Wilt,Loamy soil,Phosporous and potassium heavy fertilizer
+61,Ridged Gourd,Vegetable,50 to 60 per week,20,26,Downy Mildew,Sandy soil,Nitrogen
+62,Red Chilli,Vegetable,20 to 30 per week,18,24,Wilt and Root Rot Diseases,Clay soil,Ammoniun nitrate
+63,Peas,Vegetable,50 per week,24,26,Fusarium Wilt,Silty soil,Milogranite
+64,Curry Leaf,Vegetable,80 per week,23,26,Phyllosticta Leaf Spot,Loamy soil,Nitrogen
+65,Cucumber,Vegetable,35 to 45 per week,16,20,Powdery Mildew,Sandy soil,High quality organic fertilizer
+66,Corn,Vegetable,55 to 60 per week,10,16,Gray Leaf Spot,Silty soil,Organic manure
+67,Coriander Leaf,Vegetable,30 to 32 per week,30,32,Bacterial Leaf Spot,Clay soil,One spray of N:P:K(19:19:19) fertilizer
+68,Cluster Beans,Vegetable,20 per week,18,20,Leaf Hopper,Loamy soil,20 kg N and 40 kg P2 O5
+69,Celery,Vegetable,10 to 15 per week,20,22,Soft Rot Bacteria,"Sandy soil, Loamy soil, Clay soil",Ammoniun nitrate
+70,Cauliflower,Vegetable,30 to 35 per week,16,20,Black Rot,Sandy soil,Ammonium sulfate or ammonium nitrate
+71,Carrot,Vegetable,20 to 24 per week,20,32,Alternaria Leaf Blight,"Sandy soil, Loamy soil, Clay soil",Organic manure
+72,Cabbage,Vegetable,20 to 40 per week,30,32,Alternaria Leaf Spot,Silty soil,Diluted solution of a balanced (10-10-10) liquid fertilizers 
+73,Capsicum,Vegetable,50 per week,26,30,Pepper Mottle Virus,Loamy soil,Potassium nitrate and calcium nitrate
+74,Brinjal,Vegetable,62 to 64 per week,12,24,Foot Rot,"Sandy soil, Loamy soil",Balanced fertilizers(10-10-10)
+75,Bottle Gourd,Vegetable,80 per week,34,26,Downey Mildew,Loamy soil,Organic manure
+76,Bitter Gourd,Vegetable,12 to 20 per week,22,24,Powdery Mildew,"Sandy soil, Loamy soil, Clay soil","50-100 kg N, 40-60 kg P2O5 and 30-60 kg 25 K2O"
+77,Beetroot,Vegetable,10 per week,20,30,Bacterial Leaf Spot,Silty soil,Trifecta+
+78,Broccoli,Vegetable,12 to 15 per week,25,26,Black Rot,Loamy soil,Nitrogen
+79,Curry Leaf,Vegetable,25 per week,20,26,Leaf Spots,"Silty soil, Loamy soil",Iron sulphate
+80,Daisy,Flower,12 per week,20,28,Brown Spot,"Sandy soil, Loamy soil, Clay soil",Low nitrogen fertilizer
+81,Rose,Flower,1 to 1.2 per week,24,32,Botrytis Blight,Sandy soil,"Nitrogen, Phosphorus and potassium"
+82,Iris,Flower,3.5 to 5 per week,21,32,Bacterial Leaf Blight,Loamy soil,Low nitrogen fertilizer
+83,Narcissus,Flower,2 to 8 per week,3,18,Basal Rot ,Silty soil,Low nitrogen fertilizer(3-6-6)
+84,Orchid,Flower,4 to 8 per week,18,23,Mealybugs,Clay soil,Balanced fertilizer(20-20-20)
+85,Tulip,Flower,5.5 to 7 per week,2,20,Botrytis Blight,"Sandy soil, Loamy soil, Clay soil",Low release fertilizers(10-15-10)
+86,Sunflower,Flower,6 to 10 per week,20,25,Leaf Spots,Sandy soil,Organic manure
+87,Cyclamen,Flower,6 per week,4,10,Bacterial Soft Rot,Silty soil,Low nitrogen
+88,Carnation,Flower,2 to 6 per week,18,24,Alternaria Leaf Spot,Loamy soil,"Phosphorus, magnesium sulphate"
+89,Pansy,Flower,1 to 5 per week,7,18,Anthracnose,"Sandy soil, Loamy soil",Granular fertilizers
+90,Violet,Flower,6 to 8 per week,15,26,Bacterial Blight,"Sandy soil, Loamy soil, Clay soil",High quality organic fertilizer
+91,Mimosa,Flower,1.5 to 3 per week,15,18,Fusarium Wilt,Silty soil,Half strenght liquid fertilizers
+92,Daffodil,Flower,1 to 1.2 per week,15,20,Basal Rot ,Sandy soil,Granular slow-release 10-10-20 bulb fertilizer
+93,Lily,Flower,2 to 4 per week,18,32,Southern Blight,Loamy soil,(10-20-20)mix of slow release fertilizers
+94,Hyacinth,Flower,4 to 6 per week,3,9,Yellow Mosiac Virus,Clay soil,"Nitrogen, phosphorus"
+95,Bluebell,Flower,3 to 5 per week,16,31,Pests,Loamy soil,General fertilizers
+96,Bougainvillea,Flower,2.36  per week,15,21,Aphids,"Sandy soil, Loamy soil, Clay soil",Ammoniun nitrate
+97,Buttercup,Flower,4 per week,16,18,Squash Bugs,Sandy soil,Herbicide
+98,Cactus Flower,Flower,1 to 2 per week,18,32,Fusarium Rot,Silty soil,10-10-10 fertilizer diluted to 1/4th strength
+99,Camellia,Flower,2 to 4 per week,7,16,Petal Blight,"Sandy soil, Loamy soil",Slow release fertilizers(10-10-10)
+100,Chrysanthemum,Flower,2.36 per week,15,28,Bacterial Blight,Loamy soil,Compost
+101,Cherry Blossom,Flower,4 to 5 per week,7,15,Black Knot,Clay soil,Low nitrogen fertilizers
+102,Geranium,Flower,3 to 8 per week,6,24,Alternaria Leaf Spot,Loamy soil,20-20-20 fertilizers
+103,Gerbera,Flower,2 to 4 per week,14,27,Fusarium Stem Rot,Sandy soil,Magnesium
+104,Hibiscus,Flower,5 to 8 per week,16,32,Leaf Spots,"Sandy soil, Loamy soil",High potassium compost
+105,Gladiolus,Flower,2.5 to 5 per week,10,25,Nematodes,Loamy soil,"120 kg N, 150 kg P2O5 and 150 kg K2O"
+106,Hop,Flower,3.78 to 6.42 per week,4,20,Black Root Rot,Silty soil,Potassium nitrate
+107,Jasmine,Flower,2.36 per week,15,23,Anthracnose,"Sandy soil, Loamy soil, Clay soil",Compost
+108,Lavender,Flower,4.72 per week,14,15,Black Root Rot,Sandy soil,Diluted liquid fertilizer
+109,Lilac,Flower,7 to 10 per week,10,16,Powdery Mildew,Clay soil,Magnesium
+110,Lotus,Flower,8 to 10 per week,21,27,Powdery Mildew,Loamy soil,General fertilizers
+111,Magnolia,Flower,3 to 8 per week,0,2,Algal Leaf Spot,Silty soil,Water-soluble fertilizer
+112,Marigold,Flower,2 to 5 per week,4,12,Alternaria Leaf Spot,"Sandy soil, Loamy soil",Nitrogen
+113,Morning-Glory,Flower,5 to 7 per week,17,20,Canker,Clay soil,Diluted liquid fertilizer
+114,Orange Rose,Flower,2 to 5 per week,12,36,Rose Rust,Sandy soil,Potassium nitrate
+115,Peony,Flower,2.36 to 3.78 per week,7,15,Crown Gall,"Sandy soil, Loamy soil, Clay soil","Phosphorus, Nitrogen"
+116,Primrose,Flower,2 to 6 per week,10,18,Green Peach Aphids,Silty soil,Potassium nitrate
+117,Snapdragon,Flower,3 to 8 per week,15,23,Rust,Clay soil,Ammoniun nitrate
+118,Snowdrop,Flower,1 to 2 per week,2,8,Grey Mould,Sandy soil,High quality organic fertilizer
+119,Tuberose,Flower,1.25 to 1.50 per week,18,29,"Stem Rot, Flower Bud Rot","Sandy soil, Loamy soil","100 kg N, 50 kg P2O5 and 70 kg K2O"
+120,Snake Plant,Exotic,2 to 5 per week,21,32,"Fungal Infections, Root Rot",Sandy soil,10:10:10 NPK fertilizer
+121,Peace Lily,Exotic,5 to 7 per week,18,27,"Leaf Blight, Pythium Root Rot",Loamy soil,20:20:20 NPK fertilizer
+122,Aloe vera,Exotic,1 to 2 per week,10,29,"Root Rot, Fungal Stem Rot",Sandy soil,dilute (0.5-1-1) fertilizer
+123,Lucky Bamboo Plant,Exotic,2 to 6 per week,18,32,Sooty Mold,"Clay soil, Sandy soil",2:2:2 NPK fertilizer
+124,Ferns,Exotic,2.36 per week,10,21,"Leaf Tip Burn, Nematodes","Clay soil, Silty soil","peat, leaf mold or worm castings"
+125,Chinese Evergreen,Exotic,1 to 1.2 per week,15,27,Root Rot,Loamy soil,Diluted liquid fertilizer
+126,Grape Ivy,Exotic,3.5 to 5 per week,10,28,Leaf Spot,"Sandy soil, Clay soil",Water-soluble fertilizer
+127,Flamingo Flower,Exotic,5 to 7 per week,18,29,Bacterial Blight,Sandy soil,Phosphorus
+128,Areca Palm,Exotic,1 to 2 per week,16,24,"Root Rot, Brown Tips",Clay soil,"Nitrogen, Phosphate, Potash"
+129,Money Plant,Exotic,1 to 1.2 per week,15,30,Powdery Mildew,Loamy soil,Liquid nitrate based fertilizer
+130,Warneck Dracaena,Exotic,2 to 5 per week,13,26,Fluoride Toxicity,Loamy soil,nitrogen-phosphorous-potassium (3:1:2)
+131,Heart Leaf Philodendron,Exotic,4 to 5 per week,16,24,"Root Rot, Pests","Sandy soil, Loamy soil",20-20-20 water soluble fertilizer
+132,Azalea,Exotic,1 to 2 per week,-6,29,Petal Blight,Loamy soil,10:10:10 NPK fertilizer
+133,Green Spider Plant,Exotic,2 to 4 per week,13,18,Root Rot,Loamy soil,12-5-7 fertilizer
+134,Gerbera Daisy,Exotic,1 to 2 per week,7,10,Crown Rot,Sandy soil,"Seaweed, Fish emulsion"
+135,Weeping Fig,Exotic,5 to 7 per week,21,29,"Phomopsis Canker, Dieback",Sandy soil,"Pellet fuel, magnesium, manganese"
+136,Croton,Exotic,2 to 4 per week,13,27,Crown Gall,Clay soil,"Ammonium nitrate, Ammonium sulphate"
+137,Indian Basil,Exotic,1 to 2 per week,20,32,Fusarium Wilt,"Sandy soil, Loamy soil",Compost
+138,Lady's Slipper Orchid,Exotic,1 to 5 per week,13,21,Gray Mold,"Sandy soil, Loamy soil",Fish emulsion
+139,Jade Plant,Exotic,1 to 2 per week,10,24,Bacterial Soft Rot,Silty soil,Balanced water soluble fertilizer
+140,Zamioculcas Zamiifolia,Exotic,2 to 5 per week,15,32,Tuber Rot,Loamy soil,Balanced liquid houseplant fertilizer
+141,Sedum Morganianum,Exotic,1 to 5 per week,18,26,Leaf Withering,Sandy soil,Balanced diluted fertilizer
+142,Fiddle Leaf-Fig Plant,Exotic,6 to 7 per week,16,29,Fungal Infections,Loamy soil,10-10-10 fertilizer
+143,String of Pearl Plant,Exotic,1 to 1.2 per week,16,27,Root Rot,Sandy soil,Diluted ¼-strength complete liquid fertilizer
+144,Bunny Ear Cactus,Exotic,5 to 7 per week,21,37,Steam Base Rot,Sandy loam,Low nitrogen fertilizer
+145,Pothos,Exotic,1 to 2 per week,10,24,Pythium Root Rot,Silty soil,Balanced houseplant fertilizer
+146,Dragon Tree,Exotic,3 to 5 per week,18,27,Soft Rot,Loamy soil,water-soluble fertilizer
+147,Prayer Plant,Exotic,1 to 3 per week,18,30,Cucumber Mosaic Virus,Loamy soil,Diluted houseplant fertilizer
+148,Rubber Plant,Exotic,3.5 to 5 per week,20,35,Upas Fungus Disease,Silty soil,10-10-10 NPK water soluble fertilizer
+149,Hawaiian Umbrella Tree Bonsai,Exotic,2 to 5 per week,18,22,Fungal Leaf Spots,Loamy soil,low nitrogen liquid Bonsai fertilizer
+150,Grafted Ficus Bonsai,Exotic,1.5 to 3 per week,15,20,Root Rot,Clay soil,"Fish emulsion, Organic seaweed fertilizer"
+151,Asparagus Fern,Exotic,2.36 to 4 per week,12,21,"Fusarium Wilt, Gray Mold",Sandy loam soil,10-10-10 NPK fertilizer
+152,Lemon Button Fern,Exotic,2.5 per week,12,15,Leaf Tip Burn ,Loamy soil,Nitrogen
+153,Paddle Plant,Exotic,1 to 3 per week,15,29,Grey Mould,Sandy soil,light solution of a cactus or succulent fertilizer
+154,Dumb Cane,Exotic,2.36 per week,14,18,Marginal Leaf Burn,Loamy soil,20-20-20 NPK fertilizer
+155,Radiator Plant,Exotic,5 to 7 per week,18,27,Ring Spot,Sandy soil,"Fertilizer containing nitrogen, potassium, iron "
+156,Calathea,Exotic,2 to 6 per week,18,26,Botrytis Blight,Loamy soil,10-10-10 NPK fertilizer
+157,Kalanchoe,Exotic,1 to 2 per week,15,18,Fusarium Stem Rot,"Loamy soil, Silty soil",Balanced fertilizer(20-20-20)
+158,Pony Tail Palm,Exotic,2 to 5 per week,16,26,"Sooty Mold, Botrytis Blight",Loamy soil,10-10-10 slow release fertilizers
