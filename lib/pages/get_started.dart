@@ -2,6 +2,8 @@ import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:page_transition/page_transition.dart';
+import 'package:sprout/firebase/signIn.dart';
 import 'package:sprout/model_data/colors.dart';
 import 'package:sprout/widgets/common/sbutton.dart';
 
@@ -35,7 +37,7 @@ class GetStarted extends StatelessWidget {
 
 
             FadeIn(
-              delay: Duration(seconds: 1),
+              duration: Duration(seconds: 1),
               child: Center(
                 child: Container(
                   height: 200.h,
@@ -77,14 +79,21 @@ class GetStarted extends StatelessWidget {
 
             FadeInUp(
               delay: Duration(seconds: 1),
-              child: SButton(buttonText: "Sign In", pressAction: (){}, buttonColor: Shade.moss,)),
+              child: SButton(
+                buttonText: "Sign In", 
+                pressAction: () => Navigator.push(context, PageTransition(type: PageTransitionType.fade, child: SignIn())), 
+                buttonColor: Shade.moss,)),
 
             SizedBox(height: 8.h),
 
 
             FadeInUp(
               delay: Duration(seconds: 1),
-              child: SButton(buttonText: "Create Account", pressAction: (){}, buttonColor: Shade.smoke,textColor: Colors.white,))
+              child: SButton(
+                buttonText: "Create Account", 
+                pressAction: (){}, 
+                buttonColor: Shade.smoke,
+                textColor: Colors.white,))
 
 
 

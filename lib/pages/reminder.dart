@@ -3,7 +3,6 @@
 import 'dart:io';
 import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:flutter/material.dart';
-import 'package:sprout/widgets/common/appBar.dart';
 import 'package:sprout/widgets/reminder/notification_service.dart';
 import 'package:sprout/widgets/reminder/utilities.dart';
 
@@ -92,7 +91,6 @@ class _ReminderState extends State<Reminder> {
   Widget build(BuildContext context) {
     return Scaffold(
 
-      appBar: NewAppBar("Hi"),
 
       body: Center(
         child: Column(

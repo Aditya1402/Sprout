@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:sprout/pages/carousel.dart';
+import 'package:sprout/pages/firstPage.dart';
 
 void main() {
   AwesomeNotifications().initialize(
@@ -36,14 +36,12 @@ class MyApp extends StatelessWidget {
 
       ),
 
-      
-
       /////////////////////////////////////////////////
       home: 
       
       ScreenUtilInit(designSize: const Size(414,896), builder: () => 
       
-      CarouselPage()
+      FirstPage()
       
       )
     );
