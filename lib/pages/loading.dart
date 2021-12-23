@@ -1,20 +1,22 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:sprout/model_data/colors.dart';
+import 'package:sprout/pages/firstPage.dart';
+import 'package:sprout/pages/get_started.dart';
 
 class Loading extends StatefulWidget {
   @override
   _LoadingState createState() => _LoadingState();
 }
 
-class _LoadingState extends State<Loading> {
+class _LoadingState extends State<Loading> 
+{
   @override
   void initState() {
     super.initState();
     Timer(
         const Duration(seconds: 3),
         () => Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (context) => SecondScreen())));
+            context, MaterialPageRoute(builder: (context) => FirstPage())));
   }
 
   @override
@@ -29,16 +31,4 @@ class _LoadingState extends State<Loading> {
   }
 }
 
-class SecondScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text("GeeksForGeeks")),
-      body: Center(
-          child: Text(
-        "Home page",
-        textScaleFactor: 2,
-      )),
-    );
-  }
-}
+

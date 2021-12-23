@@ -1,9 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:awesome_notifications/awesome_notifications.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sprout/pages/firstPage.dart';
+import 'package:sprout/pages/get_started.dart';
+import 'package:sprout/pages/loading.dart';
+
 
 void main() {
+
+  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+    statusBarColor: Colors.transparent,
+  ));
+
   AwesomeNotifications().initialize(
     'resource://drawable/res_notification_logo',
     [
@@ -22,6 +32,14 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  late BuildContext context;
+
+  /////////////////////////////////////////////////////////////
+
+
+
+  /////////////////////////////////////////////////////////////
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -41,7 +59,7 @@ class MyApp extends StatelessWidget {
       
       ScreenUtilInit(designSize: const Size(414,896), builder: () => 
       
-      FirstPage()
+      Loading()
       
       )
     );
