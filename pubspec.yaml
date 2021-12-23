@@ -52,6 +52,8 @@ dependencies:
   firebase_dynamic_links: ^4.0.3
   geocoding: ^2.0.1
   font_awesome_flutter: ^9.2.0
+  tflite: any
+  camera: any
 
 flutter_native_splash:
   android: true
