@@ -72,3 +72,5 @@ android {
     minSdkVersion 21
   }
 }
+
+apply plugin: 'com.google.gms.google-services'
