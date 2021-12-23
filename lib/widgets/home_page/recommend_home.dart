@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:sprout/model_data/colors.dart';
+import 'package:sprout/pages/recommendPage.dart';
 import 'package:sprout/widgets/common/sbutton.dart';
 
 class Recommend extends StatelessWidget {
@@ -48,7 +50,7 @@ class Recommend extends StatelessWidget {
 
             SButton(
               buttonText: "Get Recommended", 
-              pressAction: (){}, 
+              pressAction: () => Navigator.push(context, PageTransition(type: PageTransitionType.fade, child: RecommendMe())), 
               buttonColor: Shade.whale)
           ],
         ),

@@ -32,58 +32,56 @@ class HomePage extends StatelessWidget {
       appBar: NewAppBar('sprout.', true, FontAwesomeIcons.ellipsisH),
       body: Padding(
         padding: const EdgeInsets.all(20.0),
-        child: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              //////////////////// GREETING ////////////////////
-              RichText(
-                text: TextSpan(
-                  text: userFirstName(name),
-                  style: TextStyle(
-                      fontFamily: 'Inter',
-                      color: Shade.ash,
-                      fontSize: 18.sp,
-                      fontWeight: FontWeight.w500),
-                  children: <TextSpan>[
-                    TextSpan(
-                        text: DayTime.dayTime(),
-                        style: TextStyle(
-                            fontWeight: FontWeight.w900,
-                            color: Shade.smoke,
-                            fontSize: 25.sp)),
-                  ],
-                ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            //////////////////// GREETING ////////////////////
+            RichText(
+              text: TextSpan(
+                text: userFirstName(name),
+                style: TextStyle(
+                    fontFamily: 'Inter',
+                    color: Shade.ash,
+                    fontSize: 18.sp,
+                    fontWeight: FontWeight.w500),
+                children: <TextSpan>[
+                  TextSpan(
+                      text: DayTime.dayTime(),
+                      style: TextStyle(
+                          fontWeight: FontWeight.w900,
+                          color: Shade.smoke,
+                          fontSize: 25.sp)),
+                ],
               ),
+            ),
         
-              //////////////////// WEATHER CARD ////////////////////
-              SizedBox(
-                height: 20.h,
-              ),
+            //////////////////// WEATHER CARD ////////////////////
+            SizedBox(
+              height: 20.h,
+            ),
         
-              WeatherCard(),
+            WeatherCard(),
         
-              //////////////////// REMINDER FEATURE ////////////////////
-              SizedBox(height: 10.h,),
-              UpcomingRem(),
+            //////////////////// REMINDER FEATURE ////////////////////
+            SizedBox(height: 10.h,),
+            UpcomingRem(),
 
-              //////////////////// SEARCH & RECOMMEND ////////////////////
-              SizedBox(height: 10.h,),
-              Recommend(),
+            //////////////////// SEARCH & RECOMMEND ////////////////////
+            SizedBox(height: 10.h,),
+            Recommend(),
         
-              ////////////////// DISEASE SCANNER ////////////////////////
-              SizedBox(height: 20.h,),
-              Text("Scan your plant",
-              style: TextStyle(
-                fontSize: 20.sp,
-                fontWeight: FontWeight.w700
-              ),),
+            ////////////////// DISEASE SCANNER ////////////////////////
+            SizedBox(height: 20.h,),
+            Text("Scan your plant",
+            style: TextStyle(
+              fontSize: 20.sp,
+              fontWeight: FontWeight.w700
+            ),),
 
-              SizedBox(height: 10.h,),
-              Scanner()
-            
-            ],
-          ),
+            SizedBox(height: 10.h,),
+            Scanner()
+          
+          ],
         ),
       ),
     );

@@ -8,7 +8,7 @@ app = Flask(__name__)
 def returnascii():
     d = {}
     temp = float(request.args['temperature'])
-    df = pd.read_csv("lib/API/dataset_sprout.csv")
+    df = pd.read_csv("dataset_sprout.csv")
 
 
     flowers = []
@@ -16,7 +16,7 @@ def returnascii():
         if ((temp >= (df.loc[x,"MinTemp"])) and (temp <= (df.loc[x,"MaxTemp"]))):
             flowers.append(df.loc[x,"Name"])
 
-    d['output'] = flowers[0]
+    d['output'] = flowers
     return d
 
 
