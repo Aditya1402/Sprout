@@ -6,6 +6,10 @@
    - awesome_notifications: ^0.6.19
 
 ### User Authentication:
+   - firebase_auth: ^3.3.4
+   - firebase_core: ^1.10.6
+   - google_sign_in: ^5.2.1
+   - firebase_dynamic_links: ^4.0.3
 
 ### Weather Feature:
    - http: ^0.13.4
@@ -27,9 +31,10 @@
 ## Animations:
    - animations: ^2.0.2
    - animate_do: ^2.0.0
+   - page_transition: ^2.0.4
 
 ## Miscellaneous:
-   - intro_slider: ^3.0.2
+   - font_awesome_flutter: ^9.2.0
 
 
 

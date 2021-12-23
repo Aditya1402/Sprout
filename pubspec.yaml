@@ -44,6 +44,14 @@ dependencies:
   animate_do: ^2.0.0
   intro_slider: ^3.0.2
   flutter_svg: ^1.0.0
+  page_transition: ^2.0.4
+  google_sign_in: ^5.2.1
+  firebase_auth: ^3.3.4
+  firebase_core: ^1.10.6
+  geolocator: ^8.0.1
+  firebase_dynamic_links: ^4.0.3
+  geocoding: ^2.0.1
+  font_awesome_flutter: ^9.2.0
 
 flutter_native_splash:
   android: true
