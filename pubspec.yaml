@@ -60,6 +60,8 @@ dependencies:
   path_provider: ^2.0.8
   tflite: any
   camera: any
+  flutter_staggered_grid_view: ^0.4.1
+  bubble_tab_indicator: ^0.1.6
 
 
 flutter_native_splash:
@@ -103,16 +105,17 @@ flutter:
     - assets/images/svg/
     - lib/Dataset/
 
-    - assets/images/plantIcon/exotics/
-    - assets/images/plantIcon/flowers/
-    - assets/images/plantIcon/fruits/
-    - assets/images/plantIcon/vegetables/
-    
-    - assets/images/plantOG/Flower/
-    - assets/images/plantOG/Fruits/
-    - assets/images/plantOG/Vegetables/
-    - assets/images/plantOG/Exotic/
+
     - assets/ML_Model/
+    - assets/images/plantIcon/Exotic/
+    - assets/images/plantIcon/Flower/
+    - assets/images/plantIcon/Fruit/
+    - assets/images/plantIcon/Vegetable/
+
+    - assets/images/plantOG/Exotic/
+    - assets/images/plantOG/Flower/
+    - assets/images/plantOG/Fruit/
+    - assets/images/plantOG/Vegetable/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -32,8 +32,7 @@ class HomePage extends StatelessWidget {
       appBar: NewAppBar('sprout.'),
       body: Padding(
         padding: const EdgeInsets.all(20.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+        child: ListView(
           children: [
             //////////////////// GREETING ////////////////////
             RichText(

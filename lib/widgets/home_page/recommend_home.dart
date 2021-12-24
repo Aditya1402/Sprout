@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:sprout/model_data/colors.dart';
 import 'package:sprout/pages/recommend_user.dart';
-import 'package:sprout/pages/detail_user.dart';
 import 'package:sprout/widgets/common/sbutton.dart';
 
 class Recommend extends StatelessWidget {

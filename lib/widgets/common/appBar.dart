@@ -26,10 +26,9 @@ class NewAppBar extends StatelessWidget implements PreferredSizeWidget {
       title: Text(
         text!,
         style: TextStyle(
-            fontSize: 16.sp, fontWeight: FontWeight.w900, color: Shade.smoke),
+            fontSize: 18.sp, fontWeight: FontWeight.w900, color: Shade.smoke),
       ),
       centerTitle: true,
-      
     );
   }
 }

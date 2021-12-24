@@ -5,6 +5,7 @@ import 'package:csv/csv.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:sprout/model_data/colors.dart';
 import 'package:sprout/widgets/common/appBar.dart';
@@ -35,11 +36,11 @@ class _RecommendedState extends State<Recommended> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Shade.moss,
-        appBar: NewAppBar("dataSet[index][1]"),
+        backgroundColor: Colors.white,
+        appBar: NewAppBar("Recommendations"),
         body: SafeArea(
           child: Container(
-            padding: EdgeInsets.all(25.w),
+            padding: EdgeInsets.all(15.w),
             child: ListView.builder(
               itemCount: dataSet.length,
               itemBuilder: (_, index) {
@@ -52,19 +53,48 @@ class _RecommendedState extends State<Recommended> {
                             type: PageTransitionType.fade,
                             child: PlantDetail(index))),
                     child: FadeInUp(
-                      child: Padding(
-                        padding: const EdgeInsets.all(20),
+                      child: Container(
+                        height: 105.h,
                         child: Card(
-                          color: index == 0 ? Colors.amber : Colors.white,
-                          child: ListTile(
-                            leading: Image.asset(
-                              'assets/images/plantIcon/fruits/Cherry.png',
-                              width: 45.w,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10),
                             ),
-                            title: Text(dataSet[index][1].toString()),
-                            // trailing: Text(dataSet[index][2].toString()),
-                          ),
-                        ),
+                            elevation: 0,
+                            color: Shade.g3,
+                            child: Padding(
+                              padding:  EdgeInsets.all(13.w),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Image.asset(
+                                      dataSet[index][12]),
+
+
+                                  Text(dataSet[index][1],
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.w800,
+                                    color: Shade.smoke,
+                                    fontSize: 16.sp
+                                  ),
+                                  ),
+
+
+                                  Text(dataSet[index][2],
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.w500,
+                                    color: Shade.ash,
+                                    fontSize: 16.sp
+                                  ),
+                                  ),
+
+                                  
+
+                                  
+
+
+                                ],
+                              ),
+                            )),
                       ),
                     ),
                   );
@@ -73,12 +103,19 @@ class _RecommendedState extends State<Recommended> {
             ),
           ),
         ),
-        floatingActionButton: FloatingActionButton(
+        floatingActionButton: FloatingActionButton.extended(
+          isExtended: true,
+          backgroundColor: Shade.smoke,
+          elevation: 0,
           onPressed: () => _loadCSV(),
+          label: Text(
+            "Recommend",
+            style: TextStyle(fontWeight: FontWeight.w300),
+          ),
+          icon: FaIcon(FontAwesomeIcons.leaf),
+          splashColor: Colors.transparent,
         ));
   }
 }
 
 //////////////////////////////////////////////////////////////////////////////////
-
-
