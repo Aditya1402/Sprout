@@ -56,6 +56,11 @@ dependencies:
   shared_preferences: ^2.0.11
   after_layout: ^1.1.0
   connectivity: ^3.0.6
+  csv: ^5.0.1
+  file_picker: ^4.3.0
+  url_launcher: ^6.0.17
+  path_provider: ^2.0.8
+  
   
 
 
@@ -98,6 +103,18 @@ flutter:
     - assets/images/lottie/
     - assets/images/png/
     - assets/images/svg/
+    - lib/Dataset/
+
+    - assets/images/plantIcon/exotics/
+    - assets/images/plantIcon/flowers/
+    - assets/images/plantIcon/fruits/
+    - assets/images/plantIcon/vegetables/
+    
+    - assets/images/plantOG/Flower/
+    - assets/images/plantOG/Fruits/
+    - assets/images/plantOG/Vegetables/
+    - assets/images/plantOG/Exotic/
+    
     - assets/ML_Model/
   #   - images/a_dot_ham.jpeg
 

@@ -29,7 +29,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: NewAppBar('sprout.', true, FontAwesomeIcons.ellipsisH),
+      appBar: NewAppBar('sprout.'),
       body: Padding(
         padding: const EdgeInsets.all(20.0),
         child: Column(

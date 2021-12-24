@@ -5,13 +5,12 @@ import 'package:sprout/pages/get_started.dart';
 import 'package:after_layout/after_layout.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-
 class Loading extends StatefulWidget {
-
   @override
   _LoadingState createState() => _LoadingState();
 }
-class _LoadingState extends State<Loading> with AfterLayoutMixin<Loading>  {
+
+class _LoadingState extends State<Loading> with AfterLayoutMixin<Loading> {
   Future checkFirstSeen() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     bool _seen = (prefs.getBool('seen') ?? false);
@@ -39,5 +38,3 @@ class _LoadingState extends State<Loading> with AfterLayoutMixin<Loading>  {
     );
   }
 }
-
-
