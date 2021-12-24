@@ -42,7 +42,6 @@ dependencies:
   lottie: ^1.2.1
   animations: ^2.0.2
   animate_do: ^2.0.0
-  intro_slider: ^3.0.2
   flutter_svg: ^1.0.0
   page_transition: ^2.0.4
   google_sign_in: ^5.2.1
@@ -59,6 +58,9 @@ dependencies:
   file_picker: ^4.3.0
   url_launcher: ^6.0.17
   path_provider: ^2.0.8
+  tflite: any
+  camera: any
+
 
 flutter_native_splash:
   android: true
@@ -110,6 +112,7 @@ flutter:
     - assets/images/plantOG/Fruits/
     - assets/images/plantOG/Vegetables/
     - assets/images/plantOG/Exotic/
+    - assets/ML_Model/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

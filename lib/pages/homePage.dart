@@ -54,33 +54,39 @@ class HomePage extends StatelessWidget {
                 ],
               ),
             ),
-        
+
             //////////////////// WEATHER CARD ////////////////////
             SizedBox(
               height: 20.h,
             ),
-        
+
             WeatherCard(),
-        
+
             //////////////////// REMINDER FEATURE ////////////////////
-            SizedBox(height: 10.h,),
+            SizedBox(
+              height: 10.h,
+            ),
             UpcomingRem(),
 
             //////////////////// SEARCH & RECOMMEND ////////////////////
-            SizedBox(height: 10.h,),
+            SizedBox(
+              height: 10.h,
+            ),
             Recommend(),
-        
-            ////////////////// DISEASE SCANNER ////////////////////////
-            SizedBox(height: 20.h,),
-            Text("Scan your plant",
-            style: TextStyle(
-              fontSize: 20.sp,
-              fontWeight: FontWeight.w700
-            ),),
 
-            SizedBox(height: 10.h,),
+            ////////////////// DISEASE SCANNER ////////////////////////
+            SizedBox(
+              height: 20.h,
+            ),
+            Text(
+              "Scan your plant",
+              style: TextStyle(fontSize: 20.sp, fontWeight: FontWeight.w700),
+            ),
+
+            SizedBox(
+              height: 10.h,
+            ),
             Scanner()
-          
           ],
         ),
       ),
