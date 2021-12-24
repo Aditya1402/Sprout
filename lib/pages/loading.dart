@@ -4,6 +4,7 @@ import 'package:sprout/pages/firstPage.dart';
 import 'package:sprout/pages/get_started.dart';
 import 'package:after_layout/after_layout.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:sprout/widgets/Nav_Home.dart';
 
 class Loading extends StatefulWidget {
   @override

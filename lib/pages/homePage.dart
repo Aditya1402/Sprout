@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:sprout/firebase/userInfo.dart';
 import 'package:sprout/model_data/colors.dart';
 import 'package:sprout/widgets/common/appBar.dart';
@@ -12,17 +11,17 @@ import 'package:sprout/widgets/home_page/weatherCard.dart';
 
 class HomePage extends StatelessWidget {
   ////////////////////////////////////////////////////////////////
-  // var firstName = '';
+  var firstName = '';
 
-  // String userFirstName(name) {
-  //   for (var i = 0; i < name.length; i++) {
-  //     if (name[i] != " ")
-  //       firstName += name[i];
-  //     else
-  //       break;
-  //   }
-  //   return 'Hi, ${firstName}.\n';
-  // }
+  String userFirstName(name) {
+    for (var i = 0; i < name.length; i++) {
+      if (name[i] != " ")
+        firstName += name[i];
+      else
+        break;
+    }
+    return 'Hi, ${firstName}.\n';
+  }
 
   /////////////////////////////////////////////////////////////
 
@@ -38,8 +37,7 @@ class HomePage extends StatelessWidget {
             //////////////////// GREETING ////////////////////
             RichText(
               text: TextSpan(
-                // text: userFirstName(name),
-                text: 'User',
+                text: userFirstName(name),
                 style: TextStyle(
                     fontFamily: 'Inter',
                     color: Shade.ash,

@@ -5,6 +5,8 @@ import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:sprout/model_data/colors.dart';
+import 'package:sprout/pages/homePage.dart';
+import 'package:sprout/widgets/Nav_Home.dart';
 import 'package:sprout/widgets/common/appBar.dart';
 import 'package:sprout/widgets/reminder/notification_service.dart';
 import 'package:sprout/widgets/reminder/utilities.dart';
@@ -73,13 +75,13 @@ class _ReminderState extends State<Reminder> {
             );
       }
 
-      Navigator.pushAndRemoveUntil(
-        context,
-        MaterialPageRoute(
-          builder: (_) => Reminder(),
-        ),
-        (route) => route.isFirst,
-      );
+      // Navigator.pushAndRemoveUntil(
+      //   context,
+      //   MaterialPageRoute(
+      //     builder: (_) => HomePage(),
+      //   ),
+      //   (route) => route.isFirst,
+      // );
     });
   }
 

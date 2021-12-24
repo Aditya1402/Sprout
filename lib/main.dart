@@ -53,5 +53,6 @@ class MyApp extends StatelessWidget {
         /////////////////////////////////////////////////
         home: ScreenUtilInit(
             designSize: const Size(414, 896), builder: () => Loading()));
+
   }
 }

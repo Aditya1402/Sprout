@@ -4,7 +4,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:sprout/model_data/colors.dart';
-import 'package:sprout/pages/homePage.dart';
+import 'package:sprout/widgets/Nav_Home.dart';
 import 'authentication.dart';
 
 class GoogleSignInButton extends StatefulWidget {
@@ -48,7 +48,7 @@ class _GoogleSignInButtonState extends State<GoogleSignInButton> {
                 if (user != null) {
                   Navigator.of(context).pushReplacement(
                     MaterialPageRoute(
-                      builder: (context) => HomePage()
+                      builder: (context) => NavHome()
                     ),
                   );
                 }
