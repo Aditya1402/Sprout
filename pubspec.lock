@@ -127,20 +127,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.4"
-  df:
-    dependency: "direct main"
-    description:
-      name: df
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.4.0-nullsafety.0"
-  extra_pedantic:
-    dependency: transitive
-    description:
-      name: extra_pedantic
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.5.0"
   fake_async:
     dependency: transitive
     description:
@@ -380,20 +366,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.17.0"
-  intro_slider:
-    dependency: "direct main"
-    description:
-      name: intro_slider
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "3.0.2"
-  jiffy:
-    dependency: transitive
-    description:
-      name: jiffy
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "4.1.0"
   js:
     dependency: transitive
     description:
