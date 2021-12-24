@@ -55,6 +55,7 @@ dependencies:
   camera: any
   shared_preferences: ^2.0.11
   after_layout: ^1.1.0
+  connectivity: ^3.0.6
   
 
 
