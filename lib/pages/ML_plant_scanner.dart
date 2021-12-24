@@ -1,5 +1,7 @@
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
+import 'package:sprout/model_data/colors.dart';
+import 'package:sprout/widgets/common/appBar.dart';
 import '../main.dart';
 import 'package:tflite/tflite.dart';
 
@@ -76,29 +78,67 @@ class _PlantScannerState extends State<PlantScanner> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: Column(
-          children: [
-            Container(
-              height: MediaQuery.of(context).size.height * 0.5,
-              width: MediaQuery.of(context).size.width,
-              child: !cameraController!.value.isInitialized
-                  ? Container()
-                  : AspectRatio(
-                      aspectRatio: cameraController!.value.aspectRatio,
-                      child: CameraPreview(cameraController!),
-                    ),
-            ),
-            const SizedBox(
-              height: 30,
-            ),
-            Text(
-              output,
-              style: const TextStyle(
-                fontSize: 15,
-                fontWeight: FontWeight.w700,
+        appBar: NewAppBar('Disease Detector'),
+        body: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            children: [
+
+              const SizedBox(
+                height: 30,
               ),
-            ),
-          ],
+              Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                height: MediaQuery.of(context).size.height * 0.45,
+                width: MediaQuery.of(context).size.width,
+                child: !cameraController!.value.isInitialized
+                    ? Container()
+                    : AspectRatio(
+                        aspectRatio: cameraController!.value.aspectRatio,
+                        child: CameraPreview(cameraController!),
+                      ),
+              ),
+              const SizedBox(
+                height: 30,
+              ),
+              Container(
+                height: 80,
+                width: MediaQuery.of(context).size.width*0.8,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  color: Shade.moss,
+                ),
+                child: Center(
+                  child: Text(
+                    output,
+                    style:  const TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w700,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 80,
+              ),
+              Padding(
+                padding: const EdgeInsets.all(12.0),
+                child: Column(
+                  children: [
+                    Icon(Icons.info_outline,size:   22,),
+                    const Text('To improve the accuracy of the of the Disease Detector, try hoding your phone close to the leaf of the plant while holding still',
+                     style: TextStyle(
+                       fontWeight: FontWeight.w100,
+                       fontSize: 12,
+                     ),),
+                  ],
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );
