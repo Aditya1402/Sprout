@@ -1,8 +1,12 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:animate_do/animate_do.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:sprout/firebase/signIn.dart';
+import 'package:sprout/model_data/colors.dart';
+import 'package:sprout/widgets/common/appBar.dart';
 
 import 'authentication.dart';
 
@@ -53,23 +57,18 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blueAccent,
-      appBar: AppBar(
-        elevation: 0,
-        backgroundColor: Colors.blueAccent,
-        title: Text("AppBar"),
-      ),
+
+      appBar: NewAppBar('Profile'),
+      
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.only(
-            left: 16.0,
-            right: 16.0,
-            bottom: 20.0,
-          ),
+          padding: EdgeInsets.all(25.w),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Row(),
+
+              SizedBox(height: 50.h,),
+
               _user.photoURL != null
                   ? ClipOval(
                       child: Material(
@@ -87,85 +86,110 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
                           padding: const EdgeInsets.all(16.0),
                           child: Icon(
                             Icons.person,
-                            size: 60,
+                            size: 90,
                             color: Colors.grey,
                           ),
                         ),
                       ),
                     ),
               SizedBox(height: 16.0),
-              Text(
-                'Hello',
-                style: TextStyle(
-                  color: Colors.grey,
-                  fontSize: 26,
-                ),
-              ),
+
+
+
+              //////////////////////////////
               SizedBox(height: 8.0),
               Text(
                 _user.displayName!,
                 style: TextStyle(
-                  color: Colors.yellowAccent,
-                  fontSize: 26,
+                  color: Shade.smoke,
+                  fontSize: 20.sp,
+                  fontWeight: FontWeight.w700
                 ),
               ),
+
+
+              ////////////////////////
               SizedBox(height: 8.0),
               Text(
-                '( ${_user.email!} )',
+                '${_user.email!}',
                 style: TextStyle(
-                  color: Colors.orangeAccent,
-                  fontSize: 20,
-                  letterSpacing: 0.5,
+                  color: Shade.smoke,
+                  fontSize: 16.sp,
+                  fontWeight: FontWeight.w500,
                 ),
               ),
-              SizedBox(height: 24.0),
+              SizedBox(height: 40.0),
               Text(
-                'You are now signed in using your Google account. To sign out of your account, click the "Sign Out" button below.',
+                'You are currently signed in using your Google Account. For signing off, click the Sign Out button below',
+                textAlign: TextAlign.center,
                 style: TextStyle(
-                    color: Colors.grey.withOpacity(0.8),
-                    fontSize: 14,
-                    letterSpacing: 0.2),
+                    color: Shade.ash,
+                    fontSize: 16.sp,),
               ),
-              SizedBox(height: 16.0),
+
+              SizedBox(height: 50.h,),
+
+              Text('This week\'s plant report',
+              style: TextStyle(
+                fontSize: 16.sp,
+                fontWeight: FontWeight.w700
+              ),),
+
+              SizedBox(height: 5.0.h),
+
+              Container(
+                width: double.maxFinite,
+                height: 100.h,
+
+                decoration: BoxDecoration(
+                  color: Shade.g3,
+                  borderRadius: BorderRadius.circular(7)
+                ),
+              ),
+
+
+              FadeIn(child: SizedBox(height: 16.0)),
               _isSigningOut
                   ? CircularProgressIndicator(
                       valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
                     )
-                  : ElevatedButton(
-                      style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all(
-                          Colors.redAccent,
+                  : Container(
+                    width: double.maxFinite,
+                    child: TextButton(
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all(
+                            Shade.moss,
+                          ),
+                          shape: MaterialStateProperty.all(
+                            RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(7),
+                            ),
+                          ),
                         ),
-                        shape: MaterialStateProperty.all(
-                          RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10),
+                        onPressed: () async {
+                          setState(() {
+                            _isSigningOut = true;
+                          });
+                          await Authentication.signOut(context: context);
+                          setState(() {
+                            _isSigningOut = false;
+                          });
+                          Navigator.of(context)
+                              .pushReplacement(_routeToSignInScreen());
+                        },
+                        child: Padding(
+                          padding: EdgeInsets.only(top: 6.0, bottom: 6.0),
+                          child: Text(
+                            'Sign Out',
+                            style: TextStyle(
+                              fontSize: 18.sp,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                            ),
                           ),
                         ),
                       ),
-                      onPressed: () async {
-                        setState(() {
-                          _isSigningOut = true;
-                        });
-                        await Authentication.signOut(context: context);
-                        setState(() {
-                          _isSigningOut = false;
-                        });
-                        Navigator.of(context)
-                            .pushReplacement(_routeToSignInScreen());
-                      },
-                      child: Padding(
-                        padding: EdgeInsets.only(top: 8.0, bottom: 8.0),
-                        child: Text(
-                          'Sign Out',
-                          style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                            letterSpacing: 2,
-                          ),
-                        ),
-                      ),
-                    ),
+                  ),
             ],
           ),
         ),

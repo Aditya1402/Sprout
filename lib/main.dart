@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:shared_preferences/shared_preferences.dart';
-import 'package:sprout/pages/firstPage.dart';
-import 'package:sprout/pages/get_started.dart';
+import 'package:sprout/pages/recommend_user.dart';
 import 'package:sprout/pages/loading.dart';
+import 'package:sprout/pages/detail_user.dart';
+import 'package:sprout/pages/reminder.dart';
 
 
 void main() {

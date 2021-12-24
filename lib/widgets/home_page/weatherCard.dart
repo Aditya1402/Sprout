@@ -7,11 +7,16 @@ import 'package:http/http.dart' as http;
 import 'package:geolocator/geolocator.dart';
 import 'package:sprout/model_data/colors.dart';
 import 'package:sprout/widgets/home_page/dayTime.dart';
+import 'dart:math';
 
 class WeatherCard extends StatefulWidget {
   @override
   _WeatherCardState createState() => _WeatherCardState();
 }
+
+///////////////////////////////////
+var sendTemp;
+///////////////////////////////////
 
 class _WeatherCardState extends State<WeatherCard> {
   //////////////////// API VARIABLES ////////////////////
@@ -72,6 +77,7 @@ class _WeatherCardState extends State<WeatherCard> {
       address = address;
       this.temperature = results['main']['temp'];
       this.weather = results['weather'][0]['main'];
+      sendTemp = temperature.floor();
     });
   }
 
@@ -124,7 +130,6 @@ class _WeatherCardState extends State<WeatherCard> {
                     color: Colors.white),
               ),
 
-
               ////////// TEMPERATURE //////////
               Text(
                 temperature != null
@@ -133,9 +138,8 @@ class _WeatherCardState extends State<WeatherCard> {
                 style: TextStyle(
                     fontSize: 45.sp,
                     fontWeight: FontWeight.w700,
-                    color: weather=='Rain'?Colors.white:Shade.smoke),
+                    color: weather == 'Rain' ? Colors.white : Shade.smoke),
               ),
-
 
               ////////// CONDITION //////////
               Text(

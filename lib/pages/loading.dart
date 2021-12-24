@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:sprout/model_data/colors.dart';
 import 'package:sprout/pages/firstPage.dart';
 import 'package:sprout/pages/get_started.dart';
 import 'package:after_layout/after_layout.dart';
@@ -31,7 +32,7 @@ class LoadingState extends State<Loading> with AfterLayoutMixin<Loading>  {
     return const Scaffold(
       body: Center(
         child: CircularProgressIndicator(
-          color: Color(0xffE2E2E2),
+          color: Shade.moss,
         ),
       ),
     );

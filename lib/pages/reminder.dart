@@ -3,6 +3,9 @@
 import 'dart:io';
 import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:sprout/model_data/colors.dart';
+import 'package:sprout/widgets/common/appBar.dart';
 import 'package:sprout/widgets/reminder/notification_service.dart';
 import 'package:sprout/widgets/reminder/utilities.dart';
 
@@ -91,53 +94,74 @@ class _ReminderState extends State<Reminder> {
   Widget build(BuildContext context) {
     return Scaffold(
 
+      appBar: NewAppBar('Set Reminder'),
 
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            
+        child: Padding(
+          padding: const EdgeInsets.all(25),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              
+              Text('What time would you like to water your plants?',
+              style: TextStyle
+              (
+                fontSize: 20.sp,
+                fontWeight: FontWeight.w700,
+                color: Shade.smoke
+              ),),
 
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            //////////////////////////////////////////////////////////////////////
-            
-            Container(
-              height: 60,
-              width: 200,
-              child: TextButton(
-                style: ButtonStyle(
-                  shape: MaterialStateProperty.all(RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20))),
-                  backgroundColor:
-                      MaterialStateProperty.all(const Color(0xffB2B9F7)),
-                  foregroundColor: MaterialStateProperty.all(Colors.white),
-                ),
-                onPressed: () async {
-                  NotificationWeekAndTime? pickedSchedule =
-                      await pickSchedule(context);
+              SizedBox(height: 10.h,),
 
-                  if (pickedSchedule != null) {
-                    createWaterReminderNotification(pickedSchedule);
-                  }
-                },
-                child: const Text(
-                  'Add a reminder',
-                  style: TextStyle(
-                    fontSize: 22,
+              Text('You can choose anytime but we recommend early in the morning.',
+              style: TextStyle
+              (
+                fontSize: 16.sp,
+                fontWeight: FontWeight.w500,
+                color: Shade.ash
+              ),),
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              //////////////////////////////////////////////////////////////////////
+              
+              Container(
+                height: 60,
+                width: 200,
+                child: TextButton(
+                  style: ButtonStyle(
+                    shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20))),
+                    backgroundColor:
+                        MaterialStateProperty.all(const Color(0xffB2B9F7)),
+                    foregroundColor: MaterialStateProperty.all(Colors.white),
+                  ),
+                  onPressed: () async {
+                    NotificationWeekAndTime? pickedSchedule =
+                        await pickSchedule(context);
+
+                    if (pickedSchedule != null) {
+                      createWaterReminderNotification(pickedSchedule);
+                    }
+                  },
+                  child: const Text(
+                    'Add a reminder',
+                    style: TextStyle(
+                      fontSize: 22,
+                    ),
                   ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

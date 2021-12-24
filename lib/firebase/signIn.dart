@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:sprout/firebase/signInButton.dart';
 import 'package:sprout/model_data/colors.dart';
 
@@ -23,7 +25,26 @@ class _SignInState extends State<SignIn> {
 
           child: 
               Center(
-                child: FutureBuilder(
+                child: Column(
+                  children: 
+                  [
+                    Spacer(),
+
+                    SvgPicture.asset("assets/images/svg/google.svg",width: 70.h,),
+
+                    SizedBox(height: 30.h,),
+
+                    Text("Continue with Google!",
+                    style: TextStyle(
+                      fontSize: 23.sp,
+                      fontWeight: FontWeight.w700,
+                      color: Shade.smoke
+                    ),),
+
+                    SizedBox(height: 20.h,),
+
+
+                  FutureBuilder(
                   future: Authentication.initializeFirebase(context: context),
                   builder: (context, snapshot) {
                     if (snapshot.hasError) {
@@ -39,6 +60,11 @@ class _SignInState extends State<SignIn> {
                     );
                   },
                 ),
+
+                Spacer()
+                  ],
+                )
+  
               ),
           ),
         ),

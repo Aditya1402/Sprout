@@ -2,6 +2,7 @@
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:sprout/model_data/colors.dart';
 import 'package:sprout/pages/homePage.dart';
 import 'authentication.dart';
@@ -22,12 +23,12 @@ class _GoogleSignInButtonState extends State<GoogleSignInButton> {
           ? CircularProgressIndicator(
               valueColor: AlwaysStoppedAnimation<Color>(Shade.moss),
             )
-          : OutlinedButton(
+          : TextButton(
               style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.all(Colors.white),
                 shape: MaterialStateProperty.all(
                   RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(40),
+                    borderRadius: BorderRadius.circular(7),
                   ),
                 ),
               ),
@@ -54,21 +55,17 @@ class _GoogleSignInButtonState extends State<GoogleSignInButton> {
 
               },
               child: Padding(
-                padding: const EdgeInsets.fromLTRB(0, 10, 0, 10),
+                padding: const EdgeInsets.fromLTRB(5, 5, 5, 5),
                 child: Row(
-                  mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     
-                    Padding(
-                      padding: const EdgeInsets.only(left: 10),
-                      child: Text(
-                        'Sign in with Google',
-                        style: TextStyle(
-                          fontSize: 20,
-                          color: Colors.black54,
-                          fontWeight: FontWeight.w600,
-                        ),
+                    Text(
+                      'Sign In',
+                      style: TextStyle(
+                        fontSize: 18.sp,
+                        color: Colors.black54,
+                        fontWeight: FontWeight.w500,
                       ),
                     )
                   ],
