@@ -11,8 +11,6 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   cameras = await availableCameras();
 
-
-
 //Initialize notification service
 
   AwesomeNotifications().initialize(
@@ -54,5 +52,6 @@ class MyApp extends StatelessWidget {
         /////////////////////////////////////////////////
         home: ScreenUtilInit(
             designSize: const Size(414, 896), builder: () => Loading()));
+
   }
 }

@@ -1,27 +1,28 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:sprout/model_data/colors.dart';
 import 'package:sprout/pages/firstPage.dart';
 import 'package:sprout/pages/get_started.dart';
 import 'package:after_layout/after_layout.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:sprout/widgets/Nav_Home.dart';
 
 class Loading extends StatefulWidget {
   @override
-  LoadingState createState() => LoadingState();
+  _LoadingState createState() => _LoadingState();
 }
-class LoadingState extends State<Loading> with AfterLayoutMixin<Loading>  {
+
+class _LoadingState extends State<Loading> with AfterLayoutMixin<Loading> {
   Future checkFirstSeen() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     bool _seen = (prefs.getBool('seen') ?? false);
 
     if (_seen) {
       Navigator.of(context).pushReplacement(
-          new MaterialPageRoute(builder: (context) => FirstPage()));
+          new MaterialPageRoute(builder: (context) => GetStarted()));
     } else {
       await prefs.setBool('seen', true);
       Navigator.of(context).pushReplacement(
-          new MaterialPageRoute(builder: (context) => GetStarted()));
+          new MaterialPageRoute(builder: (context) => FirstPage()));
     }
   }
 
@@ -32,11 +33,9 @@ class LoadingState extends State<Loading> with AfterLayoutMixin<Loading>  {
     return const Scaffold(
       body: Center(
         child: CircularProgressIndicator(
-          color: Shade.moss,
+          color: Color(0xffE2E2E2),
         ),
       ),
     );
   }
 }
-
-

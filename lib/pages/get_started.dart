@@ -6,16 +6,35 @@ import 'package:page_transition/page_transition.dart';
 import 'package:sprout/firebase/signIn.dart';
 import 'package:sprout/model_data/colors.dart';
 import 'package:sprout/widgets/common/sbutton.dart';
+import 'package:connectivity/connectivity.dart';
 
-class GetStarted extends StatelessWidget {
+class GetStarted extends StatefulWidget {
   @override
+  State<GetStarted> createState() => _GetStartedState();
+}
+isConnectedToInternet() async {
+  var connectivityResult = await (Connectivity().checkConnectivity());
+  if (connectivityResult == ConnectivityResult.none) return false;
+  return true;
+}
+class _GetStartedState extends State<GetStarted> {
+  @override
+   initState() {
+    super.initState();
+    loadPodcastsAndNavigate();
+  }
+  loadPodcastsAndNavigate() async {
+    if (!await isConnectedToInternet()) {
+      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Center(child: Text('No internet connection'))));
+    } else {}}
+    @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
         padding: EdgeInsets.all(25.w),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: 
+          children:
           [
 
             SizedBox(height: 40.h,),
@@ -29,7 +48,7 @@ class GetStarted extends StatelessWidget {
               ),),
             ),
 
-            
+
 
 
             SizedBox(height: 100.h),
@@ -37,7 +56,7 @@ class GetStarted extends StatelessWidget {
 
 
             FadeIn(
-              duration: Duration(seconds: 1),
+              duration: const Duration(seconds: 1),
               child: Center(
                 child: Container(
                   height: 200.h,
@@ -59,7 +78,7 @@ class GetStarted extends StatelessWidget {
 
             SizedBox(height: 35.h),
 
-            
+
             Text("Gardening is cheaper than therapy",
             style: TextStyle(
               fontSize: 20.sp,
@@ -78,20 +97,20 @@ class GetStarted extends StatelessWidget {
             SizedBox(height: 45.h),
 
             FadeInUp(
-              delay: Duration(seconds: 1),
+              delay: const Duration(seconds: 1),
               child: SButton(
-                buttonText: "Sign In", 
-                pressAction: () => Navigator.push(context, PageTransition(type: PageTransitionType.fade, child: SignIn())), 
+                buttonText: "Sign In",
+                pressAction: () => Navigator.push(context, PageTransition(type: PageTransitionType.fade, child: const SignIn())),
                 buttonColor: Shade.moss,)),
 
             SizedBox(height: 8.h),
 
 
             FadeInUp(
-              delay: Duration(seconds: 1),
+              delay: const Duration(seconds: 1),
               child: SButton(
-                buttonText: "Create Account", 
-                pressAction: (){}, 
+                buttonText: "Create Account",
+                pressAction: (){},
                 buttonColor: Shade.smoke,
                 textColor: Colors.white,))
 
@@ -106,3 +125,5 @@ class GetStarted extends StatelessWidget {
     );
   }
 }
+
+
