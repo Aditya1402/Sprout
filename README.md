@@ -35,6 +35,7 @@
 
 ## Miscellaneous:
    - font_awesome_flutter: ^9.2.0
+   - after_layout: ^1.1.0
 
 
 

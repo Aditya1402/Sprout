@@ -1,9 +1,9 @@
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:awesome_notifications/awesome_notifications.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:sprout/pages/firstPage.dart';
-import 'package:sprout/pages/homePage.dart';
+import 'package:sprout/pages/loading.dart';
 
 List<CameraDescription>? cameras;
 
@@ -12,7 +12,12 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   cameras = await availableCameras();
 
-  //Initialize notification service
+  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+    statusBarColor: Colors.transparent,
+  ));
+
+//Initialize notification service
+
   AwesomeNotifications().initialize(
     'resource://drawable/res_notification_logo',
     [
@@ -31,6 +36,12 @@ void main() async {
 }
 
 class MyApp extends StatelessWidget {
+  late BuildContext context;
+
+  /////////////////////////////////////////////////////////////
+
+  /////////////////////////////////////////////////////////////
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -45,6 +56,6 @@ class MyApp extends StatelessWidget {
 
         /////////////////////////////////////////////////
         home: ScreenUtilInit(
-            designSize: const Size(414, 896), builder: () => HomePage()));
+            designSize: const Size(414, 896), builder: () => Loading()));
   }
 }
