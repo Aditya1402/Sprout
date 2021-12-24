@@ -1,58 +1,130 @@
-// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: prefer_const_constructors
 
-import 'package:csv/csv.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart' show rootBundle;
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:sprout/model_data/colors.dart';
+import 'package:sprout/pages/recommend_user.dart';
 import 'package:sprout/widgets/common/appBar.dart';
-import 'package:sprout/widgets/home_page/weatherCard.dart';
 
-class Details extends StatefulWidget {
+class PlantDetail extends StatefulWidget {
+  int cardnum;
+  PlantDetail(this.cardnum);
   @override
-  _DetailsState createState() => _DetailsState();
+  _PlantDetailState createState() => _PlantDetailState();
 }
 
-class _DetailsState extends State<Details> {
-  ///////////////////////////////////////////
-
-  List<List<dynamic>> dataSet = [];
-
-  void _loadCSV() async {
-    final _rawData =
-        await rootBundle.loadString("lib/Dataset/sprout.csv");
-    List<List<dynamic>> listData = const CsvToListConverter().convert(_rawData);
-    setState(() {
-      dataSet = listData;
-    });
-  }
-  
-
-
-  ///////////////////////////////////////////
+class _PlantDetailState extends State<PlantDetail> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: NewAppBar('Recommendations'),
-      body: ListView.builder(
-        itemCount: dataSet.length,
-        itemBuilder: (_, index) {
-          if(dataSet[index][2].toString()=="Flower")
-            return Padding(
-              padding: const EdgeInsets.all(20),
-              child: Card(
-                
-                color: index == 0 ? Colors.amber : Colors.white,
-                child: ListTile(
-                  leading: Text(dataSet[index][10].toString()),
-                  // title: Text(dataSet[index][1].toString()),
-                  // trailing: Text(dataSet[index][2].toString()),
+      backgroundColor: Color(0xffFDE18D),
+      appBar: NewAppBar(dataSet[widget.cardnum][1]),
+
+      body: Column
+      (
+        children: 
+        [
+          Image.asset('assets/images/plantIcon/exotics/Azalea.png',width: 250.w,),
+
+          SizedBox(height: 30.h,),
+
+          Expanded(
+            child: Stack(
+              children:[
+
+                Container(
+            
+                decoration: BoxDecoration(
+                  color: Colors.white.withOpacity(0.45),
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(85)
+                  )
+                ),
+            
+            
+                      
+                width: double.maxFinite,
+              ),
+
+              Padding(
+                padding: const EdgeInsets.fromLTRB(0, 40, 0, 0),
+                child: Container(
+                  padding: EdgeInsets.fromLTRB(40, 40, 25, 0),
+                  width: double.maxFinite,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(75)
+                    )
+                  ),
+
+                  child: SingleChildScrollView(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: 
+                      [
+                        Text(dataSet[widget.cardnum][1],
+                        style: TextStyle(
+                          fontSize: 20.sp,
+                          color: Shade.smoke,
+                          fontWeight: FontWeight.w800
+                        ),),
+                  
+                        Text(dataSet[widget.cardnum][2],
+                        style: TextStyle(
+                          fontSize: 18.sp,
+                          fontWeight: FontWeight.w500,
+                          color: Shade.ash
+                        ),),
+                  
+                        SizedBox(
+                          height: 30.h,
+                        ),
+                  
+                        Text("Description",
+                        style: TextStyle(
+                          fontSize: 18.sp,
+                          fontWeight: FontWeight.w800
+                        ),),
+
+                        SizedBox(
+                          height: 10.h,
+                        ),
+                  
+                        Text(dataSet[widget.cardnum][10],
+                        style: TextStyle(
+                          fontSize: 15.sp,
+                          fontWeight: FontWeight.w300
+                        ),),
+
+                        SizedBox(
+                          height: 18.h,
+                        ),
+                  
+                        Text("Water Requirements",
+                        style: TextStyle(
+                          fontSize: 18.sp,
+                          fontWeight: FontWeight.w800
+                        ),),
+                      ],
+                    ),
+                  ),
+
+
+            
+            
+                        
+                  
                 ),
               ),
-            );
-          return SizedBox(); 
-        },
+
+
+              ]
+            ),
+          )
+        ],
       ),
-      floatingActionButton:
-          FloatingActionButton(child: Icon(Icons.add), onPressed: _loadCSV),
+
     );
   }
 }

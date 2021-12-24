@@ -5,19 +5,22 @@ import 'package:csv/csv.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:sprout/model_data/colors.dart';
 import 'package:sprout/widgets/common/appBar.dart';
 import 'package:sprout/widgets/home_page/weatherCard.dart';
+
+import 'detail_user.dart';
 
 class Recommended extends StatefulWidget {
   @override
   _RecommendedState createState() => _RecommendedState();
 }
 
+List<List<dynamic>> dataSet = [];
+
 class _RecommendedState extends State<Recommended> {
   ///////////////////////////////////////////
-
-  List<List<dynamic>> dataSet = [];
 
   void _loadCSV() async {
     final _rawData = await rootBundle.loadString("lib/Dataset/plantBase.csv");
@@ -40,19 +43,24 @@ class _RecommendedState extends State<Recommended> {
             child: ListView.builder(
               itemCount: dataSet.length,
               itemBuilder: (_, index) {
-
-                if (dataSet[index][4] <= sendTemp && sendTemp <= dataSet[index][5])
+                if (dataSet[index][4] <= sendTemp &&
+                    sendTemp <= dataSet[index][5])
                   return GestureDetector(
-
-                    onTap: ()=> ,
-
+                    onTap: () => Navigator.push(
+                        context,
+                        PageTransition(
+                            type: PageTransitionType.fade,
+                            child: PlantDetail(index))),
                     child: FadeInUp(
                       child: Padding(
                         padding: const EdgeInsets.all(20),
                         child: Card(
                           color: index == 0 ? Colors.amber : Colors.white,
                           child: ListTile(
-                            leading: Image.asset('assets/images/plantIcon/fruits/Cherry.png',width: 45.w,),
+                            leading: Image.asset(
+                              'assets/images/plantIcon/fruits/Cherry.png',
+                              width: 45.w,
+                            ),
                             title: Text(dataSet[index][1].toString()),
                             // trailing: Text(dataSet[index][2].toString()),
                           ),
@@ -70,3 +78,7 @@ class _RecommendedState extends State<Recommended> {
         ));
   }
 }
+
+//////////////////////////////////////////////////////////////////////////////////
+
+
