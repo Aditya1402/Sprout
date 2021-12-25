@@ -34,8 +34,8 @@ final screens = [
           indicatorColor: Shade.moss
         ),
         child: NavigationBar(
-          height: 56,
-          labelBehavior: NavigationDestinationLabelBehavior.alwaysHide,
+          height: 60,
+          labelBehavior: NavigationDestinationLabelBehavior.onlyShowSelected,
           selectedIndex: index,
           onDestinationSelected: (index)=>
               setState(() =>this.index=index),

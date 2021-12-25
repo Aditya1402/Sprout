@@ -11,17 +11,17 @@ import 'package:sprout/widgets/home_page/weatherCard.dart';
 
 class HomePage extends StatelessWidget {
   ////////////////////////////////////////////////////////////////
-  var firstName = '';
-
-  String userFirstName(name) {
-    for (var i = 0; i < name.length; i++) {
-      if (name[i] != " ")
-        firstName += name[i];
-      else
-        break;
-    }
-    return 'Hi, ${firstName}.\n';
-  }
+  // var firstName = '';
+  //
+  // String userFirstName(name) {
+  //   for (var i = 0; i < name.length; i++) {
+  //     if (name[i] != " ")
+  //       firstName += name[i];
+  //     else
+  //       break;
+  //   }
+  //   return 'Hi, ${firstName}.\n';
+  // }
 
   /////////////////////////////////////////////////////////////
 
@@ -36,7 +36,7 @@ class HomePage extends StatelessWidget {
             //////////////////// GREETING ////////////////////
             RichText(
               text: TextSpan(
-                text: userFirstName(name),
+                // text: userFirstName(name),
                 style: TextStyle(
                     fontFamily: 'Inter',
                     color: Shade.ash,
