@@ -21,9 +21,9 @@ class _GetStartedState extends State<GetStarted> {
   @override
    initState() {
     super.initState();
-    loadPodcastsAndNavigate();
+    NetworkCheck();
   }
-  loadPodcastsAndNavigate() async {
+  NetworkCheck() async {
     if (!await isConnectedToInternet()) {
       ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Center(child: Text('No internet connection'))));
     } else {}}
