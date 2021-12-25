@@ -6,7 +6,6 @@ import 'package:sprout/widgets/common/appBar.dart';
 import 'package:sprout/widgets/home_page/dayTime.dart';
 import 'package:sprout/widgets/home_page/disease_scanner.dart';
 import 'package:sprout/widgets/home_page/recommend_home.dart';
-import 'package:sprout/widgets/home_page/scheduled_reminders.dart';
 import 'package:sprout/widgets/home_page/weatherCard.dart';
 
 class HomePage extends StatelessWidget {
@@ -36,7 +35,7 @@ class HomePage extends StatelessWidget {
             //////////////////// GREETING ////////////////////
             RichText(
               text: TextSpan(
-                // text: userFirstName(name),
+                text: 'Hi, ${name}.\n',
                 style: TextStyle(
                     fontFamily: 'Inter',
                     color: Shade.ash,
@@ -61,20 +60,20 @@ class HomePage extends StatelessWidget {
             WeatherCard(),
 
             //////////////////// REMINDER FEATURE ////////////////////
-            SizedBox(
-              height: 10.h,
-            ),
-            UpcomingRem(),
+            // SizedBox(
+            //   height: 10.h,
+            // ),
+            // UpcomingRem(),
 
             //////////////////// SEARCH & RECOMMEND ////////////////////
             SizedBox(
-              height: 10.h,
+              height: 20.h,
             ),
             Recommend(),
 
             ////////////////// DISEASE SCANNER ////////////////////////
             SizedBox(
-              height: 20.h,
+              height: 30.h,
             ),
             Text(
               "Scan your plant",

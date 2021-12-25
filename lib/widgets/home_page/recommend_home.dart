@@ -6,7 +6,7 @@ import 'package:sprout/pages/recommend_user.dart';
 import 'package:sprout/widgets/common/sbutton.dart';
 
 class Recommend extends StatelessWidget {
-  const Recommend({ Key? key }) : super(key: key);
+  const Recommend({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,41 +17,37 @@ class Recommend extends StatelessWidget {
       ////////// BOX DECORATION //////////
 
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(12),
-        color: Shade.g3
-        ),
-
+          borderRadius: BorderRadius.circular(12), color: Shade.g3),
 
       ////////// CHILD ///////////////////
-      
 
       child: Padding(
         padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: 
-          [
-            Text('Get Recommendations',
-            style: TextStyle(
-              fontSize: 17.sp,
-              fontWeight: FontWeight.w700,
-              color: Shade.smoke
-            ),),
-
-
-            Text('We\'ll assist you in selecting the most thriving and appropriate plant!',
-            style: TextStyle(
-              fontSize: 14.sp,
-              fontWeight: FontWeight.w500,
-              color: Shade.ash
-            ),),
-            
-
+          children: [
+            Text(
+              'Get Recommendations',
+              style: TextStyle(
+                  fontSize: 17.sp,
+                  fontWeight: FontWeight.w700,
+                  color: Shade.smoke),
+            ),
+            Text(
+              'We\'ll assist you in selecting the most thriving and appropriate plant!',
+              style: TextStyle(
+                  fontSize: 14.sp,
+                  fontWeight: FontWeight.w500,
+                  color: Shade.ash),
+            ),
             SButton(
-              buttonText: "Get Recommended", 
-              pressAction: () => Navigator.push(context, PageTransition(type: PageTransitionType.fade, child: Recommended())), 
-              buttonColor: Shade.whale)
+                buttonText: "Get Recommended",
+                pressAction: () => Navigator.push(
+                    context,
+                    PageTransition(
+                        type: PageTransitionType.fade, child: Recommended())),
+                buttonColor: Shade.p2)
           ],
         ),
       ),

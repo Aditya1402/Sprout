@@ -69,7 +69,7 @@ class _ScannerState extends State<Scanner> {
                 splashFactory: NoSplash.splashFactory,
                 shape: MaterialStateProperty.all(RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10))),
-                backgroundColor: MaterialStateProperty.all(Shade.whale)),
+                backgroundColor: MaterialStateProperty.all(Shade.p3)),
           )
         ],
       ),
