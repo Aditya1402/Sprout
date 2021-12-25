@@ -20,6 +20,7 @@ class NewAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      automaticallyImplyLeading: false,
       iconTheme: IconThemeData(color: Shade.smoke),
       backgroundColor: Colors.transparent,
       elevation: 0,

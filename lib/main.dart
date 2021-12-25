@@ -2,6 +2,7 @@ import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:sprout/pages/loading.dart';
 import 'package:sprout/widgets/Nav_Home.dart';
 
 List<CameraDescription>? cameras;
@@ -51,6 +52,6 @@ class MyApp extends StatelessWidget {
 
         /////////////////////////////////////////////////
         home: ScreenUtilInit(
-            designSize: const Size(414, 896), builder: () => NavHome()));
+            designSize: const Size(414, 896), builder: () => Loading()));
   }
 }

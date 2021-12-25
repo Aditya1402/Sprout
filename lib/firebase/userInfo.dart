@@ -57,17 +57,16 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       appBar: NewAppBar('Profile'),
-      
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.all(25.w),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-
-              SizedBox(height: 50.h,),
+              SizedBox(
+                height: 50.h,
+              ),
 
               _user.photoURL != null
                   ? ClipOval(
@@ -94,19 +93,15 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
                     ),
               SizedBox(height: 16.0),
 
-
-
               //////////////////////////////
               SizedBox(height: 8.0),
               Text(
                 _user.displayName!,
                 style: TextStyle(
-                  color: Shade.smoke,
-                  fontSize: 20.sp,
-                  fontWeight: FontWeight.w700
-                ),
+                    color: Shade.smoke,
+                    fontSize: 20.sp,
+                    fontWeight: FontWeight.w700),
               ),
-
 
               ////////////////////////
               SizedBox(height: 8.0),
@@ -123,30 +118,28 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
                 'You are currently signed in using your Google Account. For signing off, click the Sign Out button below',
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                    color: Shade.ash,
-                    fontSize: 16.sp,),
+                  color: Shade.ash,
+                  fontSize: 16.sp,
+                ),
               ),
 
-              SizedBox(height: 50.h,),
+              SizedBox(
+                height: 50.h,
+              ),
 
-              Text('This week\'s plant report',
-              style: TextStyle(
-                fontSize: 16.sp,
-                fontWeight: FontWeight.w700
-              ),),
+              Text(
+                'This week\'s plant report',
+                style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w700),
+              ),
 
               SizedBox(height: 5.0.h),
 
               Container(
                 width: double.maxFinite,
                 height: 100.h,
-
                 decoration: BoxDecoration(
-                  color: Shade.g3,
-                  borderRadius: BorderRadius.circular(7)
-                ),
+                    color: Shade.g3, borderRadius: BorderRadius.circular(7)),
               ),
-
 
               FadeIn(child: SizedBox(height: 16.0)),
               _isSigningOut
@@ -154,8 +147,8 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
                       valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
                     )
                   : Container(
-                    width: double.maxFinite,
-                    child: TextButton(
+                      width: double.maxFinite,
+                      child: TextButton(
                         style: ButtonStyle(
                           backgroundColor: MaterialStateProperty.all(
                             Shade.moss,
@@ -189,7 +182,7 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
                           ),
                         ),
                       ),
-                  ),
+                    ),
             ],
           ),
         ),

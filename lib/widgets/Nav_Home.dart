@@ -14,12 +14,7 @@ class NavHome extends StatefulWidget {
 
 class _NavHomeState extends State<NavHome> {
   int index = 0;
-  final screens = [
-    HomePage(),
-    SearchPage(),
-    Reminder(),
-    const ProfilePage(),
-  ];
+  final screens = [HomePage(), SearchPage(), Reminder(), ProfilePage()];
 
   @override
   Widget build(BuildContext context) {

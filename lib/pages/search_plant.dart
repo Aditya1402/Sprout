@@ -17,7 +17,7 @@ class SearchPlant extends StatefulWidget {
 
 class _SearchPlantState extends State<SearchPlant> {
   void _loadPlant() async {
-    final _rawData = await rootBundle.loadString("lib/Dataset/plantBase.csv");
+    final _rawData = await rootBundle.loadString("lib/Dataset/sprout.csv");
     List<List<dynamic>> listData =
         const CsvToListConverter(shouldParseNumbers: true).convert(_rawData);
     setState(() {

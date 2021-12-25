@@ -24,7 +24,7 @@ class _RecommendedState extends State<Recommended> {
   ///////////////////////////////////////////
 
   void _loadCSV() async {
-    final _rawData = await rootBundle.loadString("lib/Dataset/plantBase.csv");
+    final _rawData = await rootBundle.loadString("lib/Dataset/sprout.csv");
     List<List<dynamic>> listData =
         const CsvToListConverter(shouldParseNumbers: true).convert(_rawData);
     setState(() {
@@ -62,36 +62,26 @@ class _RecommendedState extends State<Recommended> {
                             elevation: 0,
                             color: Shade.g3,
                             child: Padding(
-                              padding:  EdgeInsets.all(13.w),
+                              padding: EdgeInsets.all(13.w),
                               child: Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
                                 children: [
-                                  Image.asset(
-                                      dataSet[index][12]),
-
-
-                                  Text(dataSet[index][1],
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.w800,
-                                    color: Shade.smoke,
-                                    fontSize: 16.sp
+                                  Image.asset(dataSet[index][12]),
+                                  Text(
+                                    dataSet[index][1],
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.w800,
+                                        color: Shade.smoke,
+                                        fontSize: 16.sp),
                                   ),
+                                  Text(
+                                    dataSet[index][2],
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.w500,
+                                        color: Shade.ash,
+                                        fontSize: 16.sp),
                                   ),
-
-
-                                  Text(dataSet[index][2],
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.w500,
-                                    color: Shade.ash,
-                                    fontSize: 16.sp
-                                  ),
-                                  ),
-
-                                  
-
-                                  
-
-
                                 ],
                               ),
                             )),

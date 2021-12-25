@@ -36,10 +36,11 @@ class _GoogleSignInButtonState extends State<GoogleSignInButton> {
                 setState(() {
                   _isSigningIn = true;
                 });
-                
+
                 // TODO: Add a method call to the Google Sign-In authentication
 
-                User? user = await Authentication.signInWithGoogle(context: context);
+                User? user =
+                    await Authentication.signInWithGoogle(context: context);
 
                 setState(() {
                   _isSigningIn = false;
@@ -47,19 +48,15 @@ class _GoogleSignInButtonState extends State<GoogleSignInButton> {
 
                 if (user != null) {
                   Navigator.of(context).pushReplacement(
-                    MaterialPageRoute(
-                      builder: (context) => NavHome()
-                    ),
+                    MaterialPageRoute(builder: (context) => NavHome()),
                   );
                 }
-
               },
               child: Padding(
                 padding: const EdgeInsets.fromLTRB(5, 5, 5, 5),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    
                     Text(
                       'Sign In',
                       style: TextStyle(
