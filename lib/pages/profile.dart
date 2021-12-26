@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:sprout/firebase/authentication.dart';
@@ -37,7 +38,11 @@ class _ProfilePageState extends State<ProfilePage> {
                 }
 
               }, 
-          child: Text("Hi")),
+          child: ElasticIn(
+            child: Text("Switch to Profile",
+            style: TextStyle(fontSize: 20,
+            fontWeight: FontWeight.w700),),
+          )),
       ),
     );
   }

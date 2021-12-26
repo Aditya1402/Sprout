@@ -17,7 +17,7 @@ class Recommend extends StatelessWidget {
       ////////// BOX DECORATION //////////
 
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(12), color: Shade.g3),
+          borderRadius: BorderRadius.circular(12), color: Shade.mesh),
 
       ////////// CHILD ///////////////////
 

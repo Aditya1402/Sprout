@@ -1,15 +1,16 @@
 import 'package:camera/camera.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:sprout/pages/loading.dart';
-import 'package:sprout/widgets/Nav_Home.dart';
+import 'package:sprout/pages/firstPage.dart';
 
 List<CameraDescription>? cameras;
 
 void main() async {
   //Initialize cameras for plant disease scanner
   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   cameras = await availableCameras();
 
 //Initialize notification service
@@ -20,7 +21,7 @@ void main() async {
       NotificationChannel(
         channelKey: 'scheduled_channel',
         channelName: 'Scheduled Notifications',
-        defaultColor: Color(0xffcae183),
+        defaultColor: const Color(0xffcae183),
         locked: true,
         importance: NotificationImportance.High,
         soundSource: 'resource://raw/res_custom_notification',
@@ -52,6 +53,6 @@ class MyApp extends StatelessWidget {
 
         /////////////////////////////////////////////////
         home: ScreenUtilInit(
-            designSize: const Size(414, 896), builder: () => Loading()));
+            designSize: const Size(414, 896), builder: () => FirstPage()));
   }
 }

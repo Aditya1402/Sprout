@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:sprout/pages/firstPage.dart';
-import 'package:sprout/pages/get_started.dart';
+import 'package:sprout/pages/authenticationPage.dart';
 import 'package:after_layout/after_layout.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sprout/widgets/Nav_Home.dart';
@@ -18,7 +18,7 @@ class _LoadingState extends State<Loading> with AfterLayoutMixin<Loading> {
 
     if (_seen) {
       Navigator.of(context).pushReplacement(
-          new MaterialPageRoute(builder: (context) => GetStarted()));
+          new MaterialPageRoute(builder: (context) => AuthPage()));
     } else {
       await prefs.setBool('seen', true);
       Navigator.of(context).pushReplacement(

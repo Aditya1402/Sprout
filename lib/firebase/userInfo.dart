@@ -138,7 +138,7 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
                 width: double.maxFinite,
                 height: 100.h,
                 decoration: BoxDecoration(
-                    color: Shade.g3, borderRadius: BorderRadius.circular(7)),
+                    color: Shade.mesh, borderRadius: BorderRadius.circular(7)),
               ),
 
               FadeIn(child: SizedBox(height: 16.0)),

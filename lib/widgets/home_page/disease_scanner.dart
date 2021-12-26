@@ -21,7 +21,7 @@ class _ScannerState extends State<Scanner> {
       ////////// BOX DECORATION //////////
 
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(12), color: Shade.g3),
+          borderRadius: BorderRadius.circular(12), color: Shade.mesh),
 
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,

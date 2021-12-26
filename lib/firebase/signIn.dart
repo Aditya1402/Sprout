@@ -34,14 +34,14 @@ class _SignInState extends State<SignIn> {
 
                     SizedBox(height: 30.h,),
 
-                    Text("Continue with Google!",
+                    Text("Join in with Google!",
                     style: TextStyle(
-                      fontSize: 23.sp,
-                      fontWeight: FontWeight.w700,
+                      fontSize: 20.sp,
+                      fontWeight: FontWeight.w800,
                       color: Shade.smoke
                     ),),
 
-                    SizedBox(height: 20.h,),
+                    SizedBox(height: 25.h,),
 
 
                   FutureBuilder(
@@ -53,13 +53,29 @@ class _SignInState extends State<SignIn> {
                       return GoogleSignInButton();
                     }
                     return CircularProgressIndicator(
-                      color: Shade.moss,
+                      color: Shade.smoke,
+                      backgroundColor: Shade.g1,
                       valueColor: AlwaysStoppedAnimation<Color>(
                         Colors.amber,
                       ),
                     );
                   },
                 ),
+
+                ////////////////////////////////////////////////////////
+                
+                
+
+
+
+
+
+
+                /////////////////////////////////////////////////////////
+
+
+
+
 
                 Spacer()
                   ],

@@ -1,14 +1,14 @@
 // ignore_for_file: prefer_const_constructors
-
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:sprout/model_data/colors.dart';
-import 'package:sprout/pages/get_started.dart';
+import 'package:sprout/pages/authenticationPage.dart';
 import 'package:sprout/widgets/carousel_page/skip_button.dart';
 import 'package:sprout/widgets/common/sbutton.dart';
+import 'package:unicons/unicons.dart';
 
 class CarouselPage extends StatefulWidget {
   @override
@@ -16,7 +16,6 @@ class CarouselPage extends StatefulWidget {
 }
 
 class _CarouselPageState extends State<CarouselPage> {
-
   ///////////////////////////// VARIABLE DECLARATIONS //////////////////////////////
   final int _numPages = 3;
   final PageController _pageController = PageController(initialPage: 0);
@@ -34,8 +33,8 @@ class _CarouselPageState extends State<CarouselPage> {
     return AnimatedContainer(
       duration: Duration(milliseconds: 200),
       margin: EdgeInsets.symmetric(horizontal: 5.0),
-      height: 3.0,
-      width: isActive ? 35 : 35,
+      height: 5.0,
+      width: isActive ? 40 : 20,
       decoration: BoxDecoration(
         color: isActive ? Shade.smoke : Shade.g1,
         borderRadius: BorderRadius.all(Radius.circular(15)),
@@ -56,10 +55,12 @@ class _CarouselPageState extends State<CarouselPage> {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
               ///////////////// SKIP BUTTON ///////////////
-              
-              Skip(),
 
-              SizedBox(height: 100.h,),
+              Skip(_currentPage,_numPages),
+
+              SizedBox(
+                height: 100.h,
+              ),
 
               /////////////// CARD ///////////////
               FadeIn(
@@ -74,7 +75,6 @@ class _CarouselPageState extends State<CarouselPage> {
                       });
                     },
                     children: <Widget>[
-                      
                       // Carousel Cards
                       Padding(
                         padding: EdgeInsets.all(20.0.w),
@@ -82,14 +82,15 @@ class _CarouselPageState extends State<CarouselPage> {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: <Widget>[
                             Center(
-                              child: SvgPicture.asset("assets/images/svg/search.svg",
-                              width: 200.w,)
-                            ),
+                                child: SvgPicture.asset(
+                              "assets/images/svg/search.svg",
+                              width: 200.w,
+                            )),
                             SizedBox(height: 70.0.h),
                             Text(
                               'Search or Get Recommended',
                               style: TextStyle(
-                                  fontSize: 24.sp, fontWeight: FontWeight.w700),
+                                  fontSize: 24.sp, fontWeight: FontWeight.w800),
                             ),
                             SizedBox(height: 15.0.h),
                             Text(
@@ -103,23 +104,24 @@ class _CarouselPageState extends State<CarouselPage> {
                           ],
                         ),
                       ),
-              
+
                       //// 2nd Card
-                      
+
                       Padding(
                         padding: EdgeInsets.all(20.0.w),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: <Widget>[
                             Center(
-                              child: SvgPicture.asset("assets/images/svg/water_reminder.svg",
-                              width: 200.w,)
-                            ),
+                                child: SvgPicture.asset(
+                              "assets/images/svg/water_reminder.svg",
+                              width: 200.w,
+                            )),
                             SizedBox(height: 70.0.h),
                             Text(
                               'Set A Reminder',
                               style: TextStyle(
-                                  fontSize: 24.sp, fontWeight: FontWeight.w700),
+                                  fontSize: 24.sp, fontWeight: FontWeight.w800),
                             ),
                             SizedBox(height: 15.0.h),
                             Text(
@@ -133,25 +135,24 @@ class _CarouselPageState extends State<CarouselPage> {
                           ],
                         ),
                       ),
-              
-              
-                      
+
                       ///// 3rd Card
-                      
+
                       Padding(
                         padding: EdgeInsets.all(20.0.w),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: <Widget>[
                             Center(
-                              child: SvgPicture.asset("assets/images/svg/diseases.svg",
-                              width: 200.w,)
-                            ),
+                                child: SvgPicture.asset(
+                              "assets/images/svg/diseases.svg",
+                              width: 200.w,
+                            )),
                             SizedBox(height: 70.0.h),
                             Text(
                               'Detect Plant Disease',
                               style: TextStyle(
-                                  fontSize: 24.sp, fontWeight: FontWeight.w700),
+                                  fontSize: 24.sp, fontWeight: FontWeight.w800),
                             ),
                             SizedBox(height: 15.0.h),
                             Text(
@@ -170,13 +171,16 @@ class _CarouselPageState extends State<CarouselPage> {
                 ),
               ),
 
-              SizedBox(height: 20.h,),
+              SizedBox(
+                height: 20.h,
+              ),
 
               //////////////// FAB ///////////////////
 
               _currentPage != _numPages - 1
                   ? Container(
                       height: 51.5.h,
+                      
                       child: FloatingActionButton(
                         onPressed: () {
                           _pageController.nextPage(
@@ -188,18 +192,22 @@ class _CarouselPageState extends State<CarouselPage> {
                         splashColor: Colors.transparent,
                         highlightElevation: 0,
                         backgroundColor: Shade.moss,
-                        child: Icon(Icons.east_rounded),
+                        child: Icon(UniconsLine.arrow_right),
                       ),
                     )
                   : FadeIn(
-                    child: Padding(
+                      child: Padding(
                         padding: EdgeInsets.symmetric(horizontal: 25.w),
                         child: SButton(
                             buttonText: "Get Started",
-                            pressAction: () => Navigator.push(context, PageTransition(type: PageTransitionType.fade, child: GetStarted())),
+                            pressAction: () => Navigator.push(
+                                context,
+                                PageTransition(
+                                    type: PageTransitionType.fade,
+                                    child: AuthPage())),
                             buttonColor: Shade.smoke),
                       ),
-                  ),
+                    ),
 
               /////////////////////////////////////////////
               SizedBox(
@@ -209,7 +217,7 @@ class _CarouselPageState extends State<CarouselPage> {
               //////////////// SLIDERS ///////////////////
 
               FadeIn(
-                delay: Duration(seconds: 1),
+                delay: Duration(seconds: 0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: _buildPageIndicator(),

@@ -5,11 +5,11 @@ import 'package:csv/csv.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:sprout/model_data/colors.dart';
 import 'package:sprout/widgets/common/appBar.dart';
 import 'package:sprout/widgets/home_page/weatherCard.dart';
+import 'package:unicons/unicons.dart';
 
 import 'detail_user.dart';
 
@@ -60,7 +60,7 @@ class _RecommendedState extends State<Recommended> {
                               borderRadius: BorderRadius.circular(10),
                             ),
                             elevation: 0,
-                            color: Shade.g3,
+                            color: Shade.cloud,
                             child: Padding(
                               padding: EdgeInsets.all(13.w),
                               child: Row(
@@ -100,9 +100,9 @@ class _RecommendedState extends State<Recommended> {
           onPressed: () => _loadCSV(),
           label: Text(
             "Recommend",
-            style: TextStyle(fontWeight: FontWeight.w300),
+            style: TextStyle(fontWeight: FontWeight.w700),
           ),
-          icon: FaIcon(FontAwesomeIcons.leaf),
+          icon: Icon(UniconsSolid.favorite),
           splashColor: Colors.transparent,
         ));
   }

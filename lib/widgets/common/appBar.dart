@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:sprout/model_data/colors.dart';
 
 class NewAppBar extends StatelessWidget implements PreferredSizeWidget {
@@ -20,7 +19,6 @@ class NewAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      automaticallyImplyLeading: false,
       iconTheme: IconThemeData(color: Shade.smoke),
       backgroundColor: Colors.transparent,
       elevation: 0,

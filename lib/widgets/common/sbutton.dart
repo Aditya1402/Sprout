@@ -27,7 +27,7 @@ class SButton extends StatelessWidget {
       ////////// Text //////////
       child: Container(
         alignment: Alignment.center,
-        height: 35.h,
+        height: 36.h,
         // Constructor Call #2
         child: Text(
           buttonText,
@@ -45,7 +45,7 @@ class SButton extends StatelessWidget {
           // Constructor Call #4
           backgroundColor: MaterialStateProperty.all(buttonColor),
           shape: MaterialStateProperty.all(RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(8),
+            borderRadius: BorderRadius.circular(15),
           ))),
     );
   }

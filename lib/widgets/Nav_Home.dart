@@ -21,7 +21,7 @@ class _NavHomeState extends State<NavHome> {
     return Scaffold(
       body: screens[index],
       bottomNavigationBar: NavigationBarTheme(
-        data: NavigationBarThemeData(indicatorColor: Shade.moss),
+        data: NavigationBarThemeData(indicatorColor: Shade.mesh),
         child: NavigationBar(
           backgroundColor: Colors.transparent,
           height: 60,
